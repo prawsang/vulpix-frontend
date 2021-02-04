@@ -12,7 +12,7 @@ import {
 import useCount from "utils/hooks/useCount";
 
 const Home = () => {
-  const [count, increase, decrease] = useCount(1);
+  const { count, increase, decrease } = useCount(1);
   const [value, setValue] = useState("1");
 
   const onIncreaseClick = () => {
