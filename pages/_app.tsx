@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <CSSReset />
-      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" />
+      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" />
       <Component {...pageProps} />
     </ChakraProvider>
   );

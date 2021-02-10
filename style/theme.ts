@@ -1,4 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
+import headingStyle from "./heading";
 
 const customTheme = {
   fonts: {
@@ -18,6 +19,7 @@ const customTheme = {
       300: "#F7F7F7",
       400: "#B1B1B1",
       500: "#ADADAD",
+      600: "#707070",
       700: "#292929",
     },
     success: {
@@ -36,5 +38,10 @@ const customTheme = {
   },
 };
 
-const theme = extendTheme(customTheme);
+const theme = extendTheme({
+  ...customTheme,
+  components: {
+    ...headingStyle,
+  },
+});
 export default theme;

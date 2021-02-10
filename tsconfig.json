@@ -10,10 +10,7 @@
     "noImplicitAny": false,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "lib": [
-      "esnext",
-      "dom"
-    ],
+    "lib": ["esnext", "dom"],
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
@@ -21,32 +18,15 @@
     "isolatedModules": true,
     "baseUrl": ".",
     "paths": {
-      "components/*": [
-        "./components/*"
-      ],
-      "pages/*": [
-        "./pages/*"
-      ],
-      "redux/*": [
-        "./redux/*"
-      ],
-      "style/*": [
-        "./style/*"
-      ],
-      "types/*": [
-        "./types/*"
-      ],
-      "utils/*": [
-        "./utils/*"
-      ]
+      "components/*": ["./components/*"],
+      "layouts/*": ["./layouts/*"],
+      "pages/*": ["./pages/*"],
+      "redux/*": ["./redux/*"],
+      "style/*": ["./style/*"],
+      "types/*": ["./types/*"],
+      "utils/*": ["./utils/*"]
     }
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
