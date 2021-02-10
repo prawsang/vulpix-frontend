@@ -1,13 +1,14 @@
 import type { AppProps /*, AppContext */ } from "next/app";
-import { ThemeProvider, ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, CSSReset } from "@chakra-ui/react";
 import theme from "style/theme";
+import GoogleFonts from "next-google-fonts";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider>
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
+    <ChakraProvider theme={theme}>
+      <CSSReset />
+      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" />
+      <Component {...pageProps} />
     </ChakraProvider>
   );
 }
