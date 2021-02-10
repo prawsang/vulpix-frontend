@@ -4,6 +4,9 @@ const headingStyle = {
       fontWeight: 600,
     },
   },
+  body: {
+    fontWeight: 500,
+  },
 };
 
 export default headingStyle;
