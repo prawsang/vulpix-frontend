@@ -32,9 +32,6 @@ const customTheme = {
       400: "#F7DF29",
       500: "#EDCB11",
     },
-    shadow: {
-      500: "rgba(0,0,0,0.13)",
-    },
   },
 };
 
