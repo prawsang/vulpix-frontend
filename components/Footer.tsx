@@ -14,7 +14,7 @@ const Footer = () => {
           </Link>
           <Spacer />
           <Link href="/">
-            <Box maxWidth="270px" textAlign={{ sm: "center", md: "right" }}>
+            <Box maxWidth="270px" textAlign="right">
               <Text color="white" fontSize="12px" textDecoration="underline">
                 Department of Computer Engineering, Chulalongkorn University
               </Text>

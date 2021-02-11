@@ -1,29 +1,48 @@
-import { Text, Heading, Flex, Box, Container } from "@chakra-ui/react";
-import WideContainer from "components/Container";
+import {
+  Text,
+  Heading,
+  Flex,
+  Box,
+  VStack,
+  Select,
+  useBreakpointValue,
+} from "@chakra-ui/react";
+import Container from "components/Container";
 import Divider from "components/Divider";
 import DefaultLayout from "layouts/default";
 import Input from "components/Input";
 import Button from "components/Button";
 import Footer from "components/Footer";
+import Table from "components/Table";
+import * as CSS from "csstype";
 
 const Home = () => {
+  const flexDirection = useBreakpointValue({
+    md: "row",
+    base: "column",
+  }) as CSS.Property.FlexDirection;
+  const centerMobile = useBreakpointValue({
+    md: "left",
+    base: "center",
+  }) as CSS.Property.TextAlign;
+
   return (
     <DefaultLayout pageName="Home">
-      <WideContainer>
-        <Flex height="80vh" pt="20vh">
-          <Box flex="1" pr={{ md: 8, sm: 0 }}>
+      <Container mb="64px">
+        <Flex height="90vh" pt="20vh" flexDirection={flexDirection}>
+          <Box flex="1" pr={{ md: 8, base: 0 }}>
             <Heading>
               Are your favorite Android apps leaking your personal data?
             </Heading>
-            <Divider my="24px" />
+            <Divider mt="24px" mb="36px" />
           </Box>
-          <Box flex="1" pl={{ md: 8, sm: 0 }}>
+          <Box flex="1" pl={{ md: 8, base: 0 }}>
             <Heading as="h3" size="md" color="accent.500" mb="32px">
               Enter the app’s google play store URL below to search for privacy
               testing results.
             </Heading>
             <Input placeholder="Google Play Store URL" />
-            <Box mt="32px" mb="48px">
+            <Box mt="32px" mb="48px" textAlign={centerMobile}>
               <Text mb="8px" color="gray.600">
                 Can't find you application?
               </Text>
@@ -35,8 +54,37 @@ const Home = () => {
             </Box>
           </Box>
         </Flex>
-      </WideContainer>
-      <Container>
+      </Container>
+      <Container maxWidth="800px">
+        <VStack spacing="32px">
+          <Heading
+            as="h3"
+            size="md"
+            color="accent.500"
+            textTransform="uppercase"
+            textAlign="center"
+          >
+            Statistics
+          </Heading>
+          <Box textAlign="center">
+            <Select
+              placeholder="Select Option"
+              variant="filled"
+              width="500px"
+              maxWidth="100%"
+            >
+              <option value="option1">Most Searched on VULPIX</option>
+              <option value="option2">Most leaking category</option>
+              <option value="option3">Most searched on Vulpix</option>
+            </Select>
+          </Box>
+          <Table />
+        </VStack>
+        <Box textAlign="center">
+          <Button my="64px">See More</Button>
+        </Box>
+      </Container>
+      <Container maxWidth="600px">
         <Box paddingY="64px" mb="32px">
           <Divider mx="auto" mb="48px" />
           <Box textAlign="center">

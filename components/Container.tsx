@@ -1,11 +1,12 @@
-import { Container } from "@chakra-ui/react";
+import { Container as CContainer } from "@chakra-ui/react";
 
-const MyContainer = (props) => {
+const Container = (props) => {
+  const { maxWidth = "1100px" } = props;
   return (
-    <Container maxW="1100px" {...props}>
+    <CContainer width="90%" maxW={maxWidth} {...props}>
       {props.children}
-    </Container>
+    </CContainer>
   );
 };
 
-export default MyContainer;
+export default Container;
