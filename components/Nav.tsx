@@ -1,7 +1,13 @@
 import React from "react";
-import { Box, Flex, Heading, HStack, Spacer } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  HStack,
+  Spacer,
+  Container,
+} from "@chakra-ui/react";
 import Link from "components/Link";
-import MyContainer from "./Container";
 import MobileMenu from "./MobileMenu";
 
 const Nav = () => {
@@ -14,7 +20,7 @@ const Nav = () => {
       zIndex="999"
       boxShadow="0 6px 16px rgba(0,0,0,0.1)"
     >
-      <MyContainer>
+      <Container maxW="1100px">
         <Flex py="8px" alignItems="center">
           <Heading
             as="h5"
@@ -43,7 +49,7 @@ const Nav = () => {
             </HStack>
           </Box>
         </Flex>
-      </MyContainer>
+      </Container>
     </Box>
   );
 };

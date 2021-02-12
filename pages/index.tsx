@@ -1,20 +1,11 @@
-import {
-  Text,
-  Heading,
-  Flex,
-  Box,
-  VStack,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Text, Heading, Flex, Box, VStack } from "@chakra-ui/react";
 import Container from "components/Container";
 import Divider from "components/Divider";
 import DefaultLayout from "layouts/default";
 import Input from "components/Input";
 import Button from "components/Button";
-import Footer from "components/Footer";
 import Table from "components/Table";
 import Select from "components/Select";
-import * as CSS from "csstype";
 import { useState } from "react";
 import { StatTypes } from "types/stats";
 
@@ -134,7 +125,6 @@ const Home = () => {
           </Box>
         </Box>
       </Container>
-      <Footer />
     </DefaultLayout>
   );
 };
