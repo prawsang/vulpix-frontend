@@ -11,6 +11,7 @@ const Button = (props) => {
       fontSize="14px"
       paddingX="24px"
       paddingY="8px"
+      minWidth="180px"
       _hover={{
         bg: "brand.500",
       }}

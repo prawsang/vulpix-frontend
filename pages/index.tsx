@@ -4,7 +4,6 @@ import {
   Flex,
   Box,
   VStack,
-  Select,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import Container from "components/Container";
@@ -14,22 +13,39 @@ import Input from "components/Input";
 import Button from "components/Button";
 import Footer from "components/Footer";
 import Table from "components/Table";
+import Select from "components/Select";
 import * as CSS from "csstype";
+import { useState } from "react";
+import { StatTypes } from "types/stats";
+
+const statsMode = [
+  {
+    name: StatTypes.mostSearched,
+    label: "Most Searched on Vulpix",
+  },
+  {
+    name: StatTypes.mostLeakCat,
+    label: "Most Leaking Application Categories",
+  },
+];
 
 const Home = () => {
-  const flexDirection = useBreakpointValue({
-    md: "row",
-    base: "column",
-  }) as CSS.Property.FlexDirection;
-  const centerMobile = useBreakpointValue({
-    md: "left",
-    base: "center",
-  }) as CSS.Property.TextAlign;
+  const [selectedStats, setSelectedStats] = useState(StatTypes.mostSearched);
+  const onStatModeChange = (e) => {
+    setSelectedStats(e.target.value);
+  };
 
   return (
     <DefaultLayout pageName="Home">
       <Container mb="64px">
-        <Flex height="90vh" pt="20vh" flexDirection={flexDirection}>
+        <Flex
+          minHeight="90vh"
+          pt="20vh"
+          flexDirection={{
+            md: "row",
+            base: "column",
+          }}
+        >
           <Box flex="1" pr={{ md: 8, base: 0 }}>
             <Heading>
               Are your favorite Android apps leaking your personal data?
@@ -42,11 +58,18 @@ const Home = () => {
               testing results.
             </Heading>
             <Input placeholder="Google Play Store URL" />
-            <Box mt="32px" mb="48px" textAlign={centerMobile}>
+            <Box
+              mt="32px"
+              mb="48px"
+              textAlign={{
+                md: "left",
+                base: "center",
+              }}
+            >
               <Text mb="8px" color="gray.600">
                 Can't find you application?
               </Text>
-              <Text mb="16px" color="gray.700" mb="32px">
+              <Text color="gray.700" mb="32px">
                 You can request the application to be tested. This takes only a
                 few minutes.
               </Text>
@@ -66,16 +89,20 @@ const Home = () => {
           >
             Statistics
           </Heading>
-          <Box textAlign="center">
+          <Box textAlign="center" maxWidth="100%">
             <Select
               placeholder="Select Option"
               variant="filled"
               width="500px"
               maxWidth="100%"
+              value={selectedStats}
+              onChange={onStatModeChange}
             >
-              <option value="option1">Most Searched on VULPIX</option>
-              <option value="option2">Most leaking category</option>
-              <option value="option3">Most searched on Vulpix</option>
+              {statsMode.map((e) => (
+                <option value={e.name} key={e.name}>
+                  {e.label}
+                </option>
+              ))}
             </Select>
           </Box>
           <Table />
