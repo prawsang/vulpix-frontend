@@ -28,7 +28,7 @@ const Nav = () => {
             color="brand.500"
             textTransform="uppercase"
           >
-            VULPIX
+            <Link href="/">VULPIX</Link>
           </Heading>
           <Spacer />
           <MobileMenu />
@@ -37,13 +37,13 @@ const Nav = () => {
               <Link href="/browse" color="gray.600">
                 Browse
               </Link>
-              <Link href="/" color="gray.600">
+              <Link href="/request" color="gray.600">
                 Request Testing
               </Link>
-              <Link href="/" color="gray.600">
+              <Link href="/stats" color="gray.600">
                 Statistics
               </Link>
-              <Link href="/" color="gray.600">
+              <Link href="/about" color="gray.600">
                 About
               </Link>
             </HStack>

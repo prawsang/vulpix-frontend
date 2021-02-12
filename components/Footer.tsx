@@ -13,13 +13,17 @@ const Footer = () => {
             </Heading>
           </Link>
           <Spacer />
-          <Link href="/">
-            <Box maxWidth="270px" textAlign="right">
-              <Text color="white" fontSize="12px" textDecoration="underline">
+          <Box maxWidth="270px" textAlign="right">
+            <Text color="white" fontSize="12px" textDecoration="underline">
+              <a
+                href="https://www.cp.eng.chula.ac.th/en/"
+                target="_blank"
+                rel="noopener"
+              >
                 Department of Computer Engineering, Chulalongkorn University
-              </Text>
-            </Box>
-          </Link>
+              </a>
+            </Text>
+          </Box>
         </Flex>
       </WideContainer>
     </Box>

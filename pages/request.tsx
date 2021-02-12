@@ -14,6 +14,7 @@ import Select from "components/Select";
 import Container from "components/Container";
 import Input from "components/Input";
 import Link from "components/Link";
+import Button from "components/Button";
 
 const Request = () => {
   return (
@@ -58,16 +59,16 @@ const Request = () => {
             </Flex>
             <Spacer />
             <Box pt="32px">
-              <Link
-                href="/"
-                textDecoration="underline"
-                color="brand.500"
-                display="block"
-              >
-                Learn more about testing methods
-              </Link>
+              <Text textDecoration="underline">
+                <Link href="/about" color="brand.500">
+                  Learn more about testing methods
+                </Link>
+              </Text>
             </Box>
           </Flex>
+          <Box textAlign="center" mt="64px">
+            <Button>Request Testing</Button>
+          </Box>
         </Box>
       </Container>
     </DefaultLayout>
