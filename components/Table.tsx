@@ -7,9 +7,10 @@ import {
   Th,
   Td,
   Box,
-} from "@chakra-ui/react";
-import styled from "@emotion/styled";
-import ApplicationIcon from "./ApplicationIcon";
+  TableProps,
+} from '@chakra-ui/react';
+import styled from '@emotion/styled';
+import ApplicationIcon from './ApplicationIcon';
 
 const TableWrapper = styled(Box)`
   max-width: 100%;
@@ -17,7 +18,7 @@ const TableWrapper = styled(Box)`
   border-radius: 8px;
 `;
 
-const Table = (props) => {
+const Table = (props: TableProps) => {
   return (
     <TableWrapper boxShadow="0 8px 24px rgba(0,0,0,0.1)">
       <CTable variant="simple" borderRadius="8px" overflow="hidden" {...props}>

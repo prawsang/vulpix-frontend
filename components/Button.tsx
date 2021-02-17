@@ -1,4 +1,4 @@
-import { Button as CButton } from "@chakra-ui/react";
+import { Button as CButton } from '@chakra-ui/react';
 
 const Button = (props) => {
   return (
@@ -13,7 +13,7 @@ const Button = (props) => {
       paddingY="8px"
       minWidth="180px"
       _hover={{
-        bg: "brand.500",
+        bg: 'brand.500',
       }}
       {...props}
     />

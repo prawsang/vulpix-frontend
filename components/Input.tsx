@@ -1,4 +1,4 @@
-import { Input } from "@chakra-ui/react";
+import { Input } from '@chakra-ui/react';
 
 const StyledInput = (props) => {
   return (
@@ -10,8 +10,8 @@ const StyledInput = (props) => {
       borderRadius="8px"
       bg="white"
       _focus={{
-        boxShadow: "0 8px 24px rgba(0,0,0,0.2)",
-        borderColor: "brand.500",
+        boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
+        borderColor: 'brand.500',
       }}
       border="none"
       {...props}

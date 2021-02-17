@@ -1,5 +1,5 @@
-import React from "react";
-import { MdMenu } from "react-icons/md";
+import React from 'react'
+import { MdMenu } from 'react-icons/md'
 import {
   Drawer,
   DrawerBody,
@@ -10,17 +10,17 @@ import {
   Button,
   Icon,
   Box,
-} from "@chakra-ui/react";
-import styled from "@emotion/styled";
-import Link from "components/Link";
+} from '@chakra-ui/react'
+import styled from '@emotion/styled'
+import Link from 'components/Link'
 
 const MenuItem = styled(Box)`
   margin: 16px 0;
-`;
+`
 
 const MobileMenu = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = React.useRef() as React.MutableRefObject<HTMLButtonElement>;
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef() as React.MutableRefObject<HTMLButtonElement>
 
   return (
     <Box zIndex="1500">
@@ -28,22 +28,17 @@ const MobileMenu = () => {
         ref={btnRef}
         onClick={onOpen}
         bg="transparent"
-        display={{ base: "block", md: "none" }}
+        display={{ base: 'block', md: 'none' }}
       >
         <Icon as={MdMenu} boxSize={8} />
       </Button>
-      <Drawer
-        isOpen={isOpen}
-        placement="right"
-        onClose={onClose}
-        finalFocusRef={btnRef}
-      >
+      <Drawer isOpen={isOpen} placement="right" onClose={onClose} finalFocusRef={btnRef}>
         <DrawerOverlay>
           <DrawerContent>
             <DrawerCloseButton boxSize={8} />
             <DrawerBody pt="64px">
               <MenuItem>
-                <Link href="/" color="gray.600" activeColor="brand.500">
+                <Link href="/" color="gray.600">
                   Browse
                 </Link>
               </MenuItem>
@@ -67,7 +62,7 @@ const MobileMenu = () => {
         </DrawerOverlay>
       </Drawer>
     </Box>
-  );
-};
+  )
+}
 
-export default MobileMenu;
+export default MobileMenu

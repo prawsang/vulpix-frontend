@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Flex,
@@ -6,9 +5,9 @@ import {
   HStack,
   Spacer,
   Container,
-} from "@chakra-ui/react";
-import Link from "components/Link";
-import MobileMenu from "./MobileMenu";
+} from '@chakra-ui/react';
+import Link from 'components/Link';
+import MobileMenu from './MobileMenu';
 
 const Nav = () => {
   return (
@@ -32,7 +31,7 @@ const Nav = () => {
           </Heading>
           <Spacer />
           <MobileMenu />
-          <Box display={{ base: "none", md: "block" }}>
+          <Box display={{ base: 'none', md: 'block' }}>
             <HStack spacing="48px">
               <Link href="/browse" color="gray.600">
                 Browse

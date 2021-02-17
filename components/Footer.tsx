@@ -1,6 +1,6 @@
-import { Text, Heading, Flex, Box, Spacer } from "@chakra-ui/react";
-import WideContainer from "components/Container";
-import Link from "next/link";
+import { Text, Heading, Flex, Box, Spacer } from '@chakra-ui/react'
+import WideContainer from 'components/Container'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -15,11 +15,7 @@ const Footer = () => {
           <Spacer />
           <Box maxWidth="270px" textAlign="right">
             <Text color="white" fontSize="12px" textDecoration="underline">
-              <a
-                href="https://www.cp.eng.chula.ac.th/en/"
-                target="_blank"
-                rel="noopener"
-              >
+              <a href="https://www.cp.eng.chula.ac.th/en/" target="_blank" rel="noreferrer">
                 Department of Computer Engineering, Chulalongkorn University
               </a>
             </Text>
@@ -27,7 +23,7 @@ const Footer = () => {
         </Flex>
       </WideContainer>
     </Box>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

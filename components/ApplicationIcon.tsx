@@ -1,7 +1,7 @@
-import { Box } from "@chakra-ui/react";
+import { Box } from '@chakra-ui/react';
 
 const ApplicationIcon = (props) => {
-  const { imageURL, size = "64px" } = props;
+  const { imageURL, size = '64px' } = props;
   return (
     <Box
       bg="gray.400"
