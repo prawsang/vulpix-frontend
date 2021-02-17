@@ -1,7 +1,7 @@
-import type { AppProps /*, AppContext */ } from "next/app";
-import { ChakraProvider, CSSReset } from "@chakra-ui/react";
-import theme from "style/theme";
-import GoogleFonts from "next-google-fonts";
+import type { AppProps /* , AppContext */ } from 'next/app';
+import { ChakraProvider, CSSReset } from '@chakra-ui/react';
+import theme from 'style/theme';
+import GoogleFonts from 'next-google-fonts';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

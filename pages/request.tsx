@@ -1,4 +1,4 @@
-import DefaultLayout from "layouts/default";
+import DefaultLayout from 'layouts/default';
 import {
   Box,
   Heading,
@@ -8,13 +8,13 @@ import {
   Text,
   InputGroup,
   Spacer,
-} from "@chakra-ui/react";
-import { MdSearch } from "react-icons/md";
-import Select from "components/Select";
-import Container from "components/Container";
-import Input from "components/Input";
-import Link from "components/Link";
-import Button from "components/Button";
+} from '@chakra-ui/react';
+import { MdSearch } from 'react-icons/md';
+import Select from 'components/Select';
+import Container from 'components/Container';
+import Input from 'components/Input';
+import Link from 'components/Link';
+import Button from 'components/Button';
 
 const Request = () => {
   return (
@@ -35,11 +35,11 @@ const Request = () => {
           </Heading>
           <Flex
             my="32px"
-            textAlign={{ base: "center", md: "left" }}
+            textAlign={{ base: 'center', md: 'left' }}
             alignItems="flex-end"
-            display={{ base: "block", md: "flex" }}
+            display={{ base: 'block', md: 'flex' }}
           >
-            <Flex justifyContent={{ base: "center", md: "flex-start" }}>
+            <Flex justifyContent={{ base: 'center', md: 'flex-start' }}>
               <Box mr="16px">
                 <Text color="gray.500" mb="8px">
                   Testing Method
