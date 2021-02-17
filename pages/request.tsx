@@ -1,4 +1,4 @@
-import DefaultLayout from 'layouts/default';
+import DefaultLayout from 'layouts/default'
 import {
   Box,
   Heading,
@@ -8,13 +8,13 @@ import {
   Text,
   InputGroup,
   Spacer,
-} from '@chakra-ui/react';
-import { MdSearch } from 'react-icons/md';
-import Select from 'components/Select';
-import Container from 'components/Container';
-import Input from 'components/Input';
-import Link from 'components/Link';
-import Button from 'components/Button';
+} from '@chakra-ui/react'
+import { MdSearch } from 'react-icons/md'
+import Select from 'components/common/Select'
+import Container from 'components/common/Container'
+import Input from 'components/common/Input'
+import Link from 'components/common/Link'
+import Button from 'components/common/Button'
 
 const Request = () => {
   return (
@@ -72,7 +72,7 @@ const Request = () => {
         </Box>
       </Container>
     </DefaultLayout>
-  );
-};
+  )
+}
 
-export default Request;
+export default Request

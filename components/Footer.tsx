@@ -1,5 +1,5 @@
 import { Text, Heading, Flex, Box, Spacer } from '@chakra-ui/react'
-import WideContainer from 'components/Container'
+import WideContainer from 'components/common/Container'
 import Link from 'next/link'
 
 const Footer = () => {

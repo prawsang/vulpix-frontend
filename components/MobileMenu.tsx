@@ -12,7 +12,7 @@ import {
   Box,
 } from '@chakra-ui/react'
 import styled from '@emotion/styled'
-import Link from 'components/Link'
+import Link from 'components/common/Link'
 
 const MenuItem = styled(Box)`
   margin: 16px 0;

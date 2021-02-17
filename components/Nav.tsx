@@ -1,13 +1,6 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  HStack,
-  Spacer,
-  Container,
-} from '@chakra-ui/react';
-import Link from 'components/Link';
-import MobileMenu from './MobileMenu';
+import { Box, Flex, Heading, HStack, Spacer, Container } from '@chakra-ui/react'
+import Link from 'components/common/Link'
+import MobileMenu from './MobileMenu'
 
 const Nav = () => {
   return (
@@ -21,12 +14,7 @@ const Nav = () => {
     >
       <Container maxW="1100px">
         <Flex py="8px" alignItems="center">
-          <Heading
-            as="h5"
-            size="lg"
-            color="brand.500"
-            textTransform="uppercase"
-          >
+          <Heading as="h5" size="lg" color="brand.500" textTransform="uppercase">
             <Link href="/">VULPIX</Link>
           </Heading>
           <Spacer />
@@ -50,7 +38,7 @@ const Nav = () => {
         </Flex>
       </Container>
     </Box>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav
