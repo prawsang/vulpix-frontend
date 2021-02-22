@@ -1,9 +1,9 @@
-import { Button as CButton } from '@chakra-ui/react';
+import { Button as CButton } from '@chakra-ui/react'
 
 const Button = (props) => {
   return (
     <CButton
-      bg="brand.500"
+      bg="primary.500"
       borderRadius="999px"
       color="white"
       boxShadow="0 6px 16px rgba(255,30,5,0.5)"
@@ -13,11 +13,11 @@ const Button = (props) => {
       paddingY="8px"
       minWidth="180px"
       _hover={{
-        bg: 'brand.500',
+        bg: 'primary.500',
       }}
       {...props}
     />
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

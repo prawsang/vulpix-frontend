@@ -60,7 +60,7 @@ const Request = () => {
             <Spacer />
             <Box pt="32px">
               <Text textDecoration="underline">
-                <Link href="/about" color="brand.500">
+                <Link href="/about" color="primary.500">
                   Learn more about testing methods
                 </Link>
               </Text>

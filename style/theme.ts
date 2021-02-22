@@ -1,5 +1,5 @@
-import { extendTheme } from '@chakra-ui/react';
-import headingStyle from './heading';
+import { extendTheme } from '@chakra-ui/react'
+import headingStyle from './heading'
 
 const customTheme = {
   fonts: {
@@ -7,7 +7,7 @@ const customTheme = {
     heading: 'Montserrat, sans-serif',
   },
   colors: {
-    brand: {
+    primary: {
       500: '#FF8205',
       700: 'rgba(255,30,5,0.5)',
     },
@@ -15,8 +15,8 @@ const customTheme = {
       500: '#1224A8',
     },
     gray: {
-      200: '#F2F2F2',
-      300: '#F7F7F7',
+      200: '#F7F7F7',
+      300: '#F2F2F2',
       400: '#B1B1B1',
       500: '#ADADAD',
       600: '#707070',
@@ -33,12 +33,12 @@ const customTheme = {
       500: '#EDCB11',
     },
   },
-};
+}
 
 const theme = extendTheme({
   ...customTheme,
   components: {
     ...headingStyle,
   },
-});
-export default theme;
+})
+export default theme

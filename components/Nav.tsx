@@ -14,7 +14,7 @@ const Nav = () => {
     >
       <Container maxW="1100px">
         <Flex py="8px" alignItems="center">
-          <Heading as="h5" size="lg" color="brand.500" textTransform="uppercase">
+          <Heading as="h5" size="lg" color="primary.500" textTransform="uppercase">
             <Link href="/">VULPIX</Link>
           </Heading>
           <Spacer />

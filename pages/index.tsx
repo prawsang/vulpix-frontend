@@ -1,11 +1,11 @@
-import { Text, Heading, Flex, Box, VStack, Menu, MenuList, MenuItem } from '@chakra-ui/react'
+import { Text, Heading, Flex, Box, VStack } from '@chakra-ui/react'
+import DefaultLayout from 'layouts/default'
 import Container from 'components/common/Container'
 import Divider from 'components/common/Divider'
-import DefaultLayout from 'layouts/default'
 import Input from 'components/common/Input'
 import Button from 'components/common/Button'
-import Table from 'components/common/Table'
 import Select from 'components/common/Select'
+import Table from 'components/home/Table'
 import { useState } from 'react'
 import { StatTypes } from 'types/stats'
 
@@ -47,17 +47,6 @@ const Home = () => {
             </Heading>
             <Box position="relative">
               <Input placeholder="Application Name" />
-              <Box position="absolute" top="0" left="0">
-                <Menu>
-                  <MenuList>
-                    <MenuItem>Download</MenuItem>
-                    <MenuItem>Create a Copy</MenuItem>
-                    <MenuItem>Mark as Draft</MenuItem>
-                    <MenuItem>Delete</MenuItem>
-                    <MenuItem>Attend a Workshop</MenuItem>
-                  </MenuList>
-                </Menu>
-              </Box>
             </Box>
             <Box
               mt="32px"
