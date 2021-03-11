@@ -5,7 +5,7 @@ import Divider from 'components/common/Divider'
 import Input from 'components/common/Input'
 import Button from 'components/common/Button'
 import Select from 'components/common/Select'
-import Table from 'components/home/Table'
+import HomeTable from 'components/home/Table'
 import { useState } from 'react'
 import { StatTypes } from 'types/stats'
 
@@ -17,6 +17,33 @@ const statsMode = [
   {
     name: StatTypes.mostLeakCat,
     label: 'Most Leaking Application Categories',
+  },
+]
+
+const mockData = [
+  {
+    id: '0',
+    applicationName: 'Application 1',
+    applicationLink: '/browse/app/application-1',
+    categoryName: 'Social Networking',
+    categoryLink: '/browse/category/social-networking',
+    vulpixScore: 20,
+  },
+  {
+    id: '1',
+    applicationName: 'Application 2',
+    applicationLink: '/browse/app/application-2',
+    categoryName: 'Games',
+    categoryLink: '/browse/category/games',
+    vulpixScore: 50,
+  },
+  {
+    id: '2',
+    applicationName: 'Application 3',
+    applicationLink: '/browse/app/application-3',
+    categoryName: 'Lifestyle',
+    categoryLink: '/browse/category/lifestyle',
+    vulpixScore: 90,
   },
 ]
 
@@ -94,7 +121,7 @@ const Home = () => {
               ))}
             </Select>
           </Box>
-          <Table />
+          <HomeTable data={mockData} />
         </VStack>
         <Box textAlign="center">
           <Button my="64px">See More</Button>
