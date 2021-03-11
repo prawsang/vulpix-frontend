@@ -2,18 +2,18 @@ import DefaultLayout from 'layouts/default'
 import {
   Box,
   Heading,
-  InputRightElement,
-  Icon,
-  Flex,
-  Text,
-  InputGroup,
-  Spacer,
+  // InputRightElement,
+  // Icon,
+  // Flex,
+  // Text,
+  // InputGroup,
+  // Spacer,
 } from '@chakra-ui/react'
-import { MdSearch } from 'react-icons/md'
-import Select from 'components/common/Select'
+// import { MdSearch } from 'react-icons/md'
+// import Select from 'components/common/Select'
 import Container from 'components/common/Container'
 import Input from 'components/common/Input'
-import Link from 'components/common/Link'
+// import Link from 'components/common/Link'
 import Button from 'components/common/Button'
 
 const Request = () => {
@@ -24,13 +24,10 @@ const Request = () => {
           <Heading as="h1" size="md" textTransform="uppercase" mt="32">
             Request Testing
           </Heading>
-          <InputGroup my="32px">
+          <Box mt="32px">
             <Input placeholder="Enter app’s URL on Play Store (e.g. https://play.google.com/store/apps/details?id=…)" />
-            <InputRightElement>
-              <Icon as={MdSearch} boxSize={6} />
-            </InputRightElement>
-          </InputGroup>
-          <Heading as="h3" size="sm" textTransform="uppercase">
+          </Box>
+          {/* <Heading as="h3" size="sm" textTransform="uppercase">
             Details
           </Heading>
           <Flex
@@ -65,7 +62,7 @@ const Request = () => {
                 </Link>
               </Text>
             </Box>
-          </Flex>
+          </Flex> */}
           <Box textAlign="center" mt="64px">
             <Button>Request Testing</Button>
           </Box>
