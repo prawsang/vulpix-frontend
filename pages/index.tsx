@@ -2,12 +2,12 @@ import { Text, Heading, Flex, Box, VStack } from '@chakra-ui/react'
 import DefaultLayout from 'layouts/default'
 import Container from 'components/common/Container'
 import Divider from 'components/common/Divider'
-import Input from 'components/common/Input'
 import Button from 'components/common/Button'
 import Select from 'components/common/Select'
 import HomeTable from 'components/home/Table'
 import { useState } from 'react'
 import { StatTypes } from 'types/stats'
+import SearchBar from 'components/common/SearchBar'
 
 const statsMode = [
   {
@@ -73,7 +73,7 @@ const Home = () => {
               Enter the app’s name below to search on our site for privacy testing results.
             </Heading>
             <Box position="relative">
-              <Input placeholder="Application Name" />
+              <SearchBar />
             </Box>
             <Box
               mt="32px"

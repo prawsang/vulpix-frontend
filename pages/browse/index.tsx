@@ -3,7 +3,7 @@ import DefaultLayout from 'layouts/default'
 import Container from 'components/common/Container'
 import CategorySelect from 'components/browse/CategorySelect'
 import CTA from 'components/common/CTA'
-import SearchBar from 'components/browse/SearchBar'
+import SearchBar from 'components/common/SearchBar'
 
 const Browse = () => {
   return (

@@ -7,7 +7,7 @@ import CTA from 'components/common/CTA'
 import Table from 'components/common/Table'
 import { useRouter } from 'next/router'
 import { categoryMap } from 'utils/categoryMap'
-import SearchBar from 'components/browse/SearchBar'
+import SearchBar from 'components/common/SearchBar'
 
 const mockData = [
   {
