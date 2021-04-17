@@ -1,5 +1,5 @@
 // import { useState } from 'react'
-import { Box, Heading } from '@chakra-ui/react'
+import { Box, Heading, Flex } from '@chakra-ui/react'
 import DefaultLayout from 'layouts/default'
 import Container from 'components/common/Container'
 import CategorySelect from 'components/browse/CategorySelect'
@@ -8,6 +8,7 @@ import Table from 'components/common/Table'
 import { useRouter } from 'next/router'
 import { categoryMap } from 'utils/categoryMap'
 import SearchBar from 'components/common/SearchBar'
+import Pagination from 'components/common/Pagination'
 
 const mockData = [
   {
@@ -38,7 +39,9 @@ const mockData = [
 
 const Browse = () => {
   const router = useRouter()
-  const category = router.query.category as string
+  const query = router.query
+  const category = query.category as string
+  const page = query.page as string
 
   return (
     <DefaultLayout pageName="Browse">
@@ -53,6 +56,9 @@ const Browse = () => {
           {category && categoryMap[category]}
         </Heading>
         <Table primary="application" showCategory={false} showOrder={false} data={mockData} />
+        <Flex justifyContent="center" width="100%" paddingTop="64px">
+          <Pagination currentPage={page ? parseInt(page, 10) : 1} totalPages={10} />
+        </Flex>
         <Box maxWidth="800px" marginX="auto">
           <CategorySelect pt="96px" pb="64px" />
           <CTA mt="64px" />

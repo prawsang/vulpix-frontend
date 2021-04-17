@@ -1,4 +1,4 @@
-import { Heading, Box, Text } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
 import Progress from 'components/common/Progress'
 
 type Props = {
@@ -7,14 +7,14 @@ type Props = {
 
 const ScoreDisplay = ({ score }: Props) => {
   const getColor = () => {
-    if (score < 30) return 'error.500'
-    if (score >= 70) return 'success.500'
+    if (score < 30) return 'success.500'
+    if (score >= 70) return 'error.500'
     return 'warning.500'
   }
 
   const getText = () => {
-    if (score < 30) return 'Unsecured'
-    if (score >= 70) return 'Secured'
+    if (score < 30) return 'Low Risk'
+    if (score >= 70) return 'High Risk'
     return 'Fair'
   }
 

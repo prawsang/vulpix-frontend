@@ -1,6 +1,6 @@
-import { Button as CButton } from '@chakra-ui/react'
+import { Button as CButton, ButtonProps } from '@chakra-ui/react'
 
-const Button = (props) => {
+const Button = (props: ButtonProps) => {
   return (
     <CButton
       bg="primary.500"
