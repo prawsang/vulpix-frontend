@@ -30,7 +30,6 @@ const genPageNumbers = (currentPage: number, totalPages: number) => {
 const Pagination = (props: Props) => {
   const router = useRouter()
   const { query, pathname } = router
-  const { term } = query
 
   const { currentPage, totalPages } = props
 
@@ -43,7 +42,7 @@ const Pagination = (props: Props) => {
           href={{
             pathname,
             query: {
-              term,
+              ...query,
               page: currentPage - 1,
             },
           }}
@@ -58,7 +57,7 @@ const Pagination = (props: Props) => {
           href={{
             pathname,
             query: {
-              term,
+              ...query,
               page: e,
             },
           }}
@@ -73,7 +72,7 @@ const Pagination = (props: Props) => {
           href={{
             pathname,
             query: {
-              term,
+              ...query,
               page: currentPage + 1,
             },
           }}
