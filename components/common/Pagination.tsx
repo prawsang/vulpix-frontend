@@ -10,11 +10,13 @@ interface Props {
 }
 
 const genPageNumbers = (currentPage: number, totalPages: number) => {
+  if (currentPage <= 0 || totalPages <= 0) return []
+  const maxPages = Math.min(5, totalPages)
   const pages = [currentPage] as number[]
   let toNext = currentPage + 1
   let toPrev = currentPage - 1
-  while (pages.length < 5) {
-    if (toNext <= totalPages) {
+  while (pages.length < maxPages) {
+    if (toNext <= maxPages) {
       pages.push(toNext)
       toNext++
     }
@@ -37,21 +39,19 @@ const Pagination = (props: Props) => {
 
   return (
     <HStack alignItems="center" spacing="16px">
-      {currentPage !== 1 && (
-        <Link
-          href={{
-            pathname,
-            query: {
-              ...query,
-              page: currentPage - 1,
-            },
-          }}
-        >
-          <Button minWidth="auto" paddingLeft="8px" paddingRight="8px">
-            <MdKeyboardArrowLeft color="white" size="24px" />
-          </Button>
-        </Link>
-      )}
+      <Link
+        href={{
+          pathname,
+          query: {
+            ...query,
+            page: currentPage - 1,
+          },
+        }}
+      >
+        <Button minWidth="auto" paddingLeft="8px" paddingRight="8px" disabled={currentPage <= 1}>
+          <MdKeyboardArrowLeft color="white" size="24px" />
+        </Button>
+      </Link>
       {pages.map((e) => (
         <Link
           href={{
@@ -67,21 +67,24 @@ const Pagination = (props: Props) => {
           {e}
         </Link>
       ))}
-      {currentPage !== totalPages && (
-        <Link
-          href={{
-            pathname,
-            query: {
-              ...query,
-              page: currentPage + 1,
-            },
-          }}
+      <Link
+        href={{
+          pathname,
+          query: {
+            ...query,
+            page: currentPage + 1,
+          },
+        }}
+      >
+        <Button
+          minWidth="auto"
+          paddingLeft="8px"
+          paddingRight="8px"
+          disabled={currentPage >= totalPages}
         >
-          <Button minWidth="auto" paddingLeft="8px" paddingRight="8px">
-            <MdKeyboardArrowRight color="white" size="24px" />
-          </Button>
-        </Link>
-      )}
+          <MdKeyboardArrowRight color="white" size="24px" />
+        </Button>
+      </Link>
     </HStack>
   )
 }
