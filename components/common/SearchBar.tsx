@@ -15,7 +15,7 @@ const SearchBar = () => {
 
   const onSearch = (e) => {
     e.preventDefault()
-    router.push(`/browse/search?term=${searchText}`)
+    router.push(`/browse/search?searchTerm=${searchText}&page=1`)
   }
 
   return (

@@ -33,6 +33,7 @@ module.exports = {
         'no-tabs': 'off',
         'comma-dangle': 'off',
         indent: 'off',
+        'implicit-arrow-linebreak': 'off',
 
         'no-unused-vars': 'off', // used '@typescript-eslint/no-unused-vars' instead
         'dot-notation': [0], // must do because of immutable migration
@@ -133,6 +134,7 @@ module.exports = {
         'react/no-danger': 'off',
         'react/jsx-boolean-value': 'off',
         'react/react-in-jsx-scope': 'off',
+        'react/display-name': 'off',
 
         // import
         'import/no-duplicates': [0], // drain performance

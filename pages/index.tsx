@@ -22,28 +22,28 @@ const statsMode = [
 
 const mockData = [
   {
-    id: '0',
-    applicationName: 'Application 1',
-    applicationLink: '/browse/app/application-1',
-    categoryName: 'Social Networking',
-    categoryLink: '/browse/category/social-networking',
-    vulpixScore: 20,
+    identifier: 'com.vulpix.vulpix2',
+    name: 'My Vulpix Application',
+    devName: 'CP44',
+    iconUrl: 'https://picsum.photos/seed/picsum/64/64',
+    categorySlug: 'social-networking',
+    createdAt: '2021-03-26T21:25:10.308Z',
+    updatedAt: '2021-03-26T21:25:23.186Z',
+    results: [
+      {
+        vulpixScore: 70,
+      },
+    ],
   },
   {
-    id: '1',
-    applicationName: 'Application 2',
-    applicationLink: '/browse/app/application-2',
-    categoryName: 'Games',
-    categoryLink: '/browse/category/games',
-    vulpixScore: 50,
-  },
-  {
-    id: '2',
-    applicationName: 'Application 3',
-    applicationLink: '/browse/app/application-3',
-    categoryName: 'Lifestyle',
-    categoryLink: '/browse/category/lifestyle',
-    vulpixScore: 90,
+    identifier: 'com.plakim.party',
+    name: 'I love to party',
+    devName: 'Plakim',
+    iconUrl: null,
+    categorySlug: 'social-networking',
+    createdAt: '2021-03-26T21:25:10.308Z',
+    updatedAt: '2021-03-26T21:25:23.186Z',
+    results: [],
   },
 ]
 
