@@ -37,7 +37,7 @@ export const tableWithCategory = [
     key: 'vulpixScore',
     render: (row) =>
       row.results[0] ? (
-        <ScoreDisplay score={row.results[0].score} />
+        <ScoreDisplay score={row.results[0].vulpixScore} />
       ) : (
         <Text color="gray.400">No Data</Text>
       ),
@@ -68,7 +68,7 @@ export const tableWithoutCategory = [
     key: 'vulpixScore',
     render: (row) =>
       row.results[0] ? (
-        <ScoreDisplay score={row.results[0].score} />
+        <ScoreDisplay score={row.results[0].vulpixScore} />
       ) : (
         <Text color="gray.400">No Data</Text>
       ),
