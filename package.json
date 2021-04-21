@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --project tsconfig.json --pretty --noEmit",
-    "lint": "eslint --ext js,jsx,ts,tsx --fix '*/**.{ts,tsx}'"
+    "lint": "eslint --ext js,jsx,ts,tsx --fix '*/**.{ts,tsx}'",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.2.1",
