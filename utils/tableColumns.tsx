@@ -31,7 +31,7 @@ export const tableWithCategory = [
     key: 'vulpixScore',
     render: (row) =>
       row.results[0] ? (
-        <ScoreDisplay score={row.results[0].vulpixScore} />
+        <ScoreDisplay score={row.results[row.results.length - 1].vulpixScore} />
       ) : (
         <Text color="gray.400">No Data</Text>
       ),
@@ -57,7 +57,7 @@ export const tableWithoutCategory = [
     key: 'vulpixScore',
     render: (row) =>
       row.results[0] ? (
-        <ScoreDisplay score={row.results[0].vulpixScore} />
+        <ScoreDisplay score={row.results[row.results.length - 1].vulpixScore} />
       ) : (
         <Text color="gray.400">No Data</Text>
       ),
@@ -88,7 +88,7 @@ export const tableWithOrder = [
     key: 'vulpixScore',
     render: (row) =>
       row.results[0] ? (
-        <ScoreDisplay score={row.results[0].vulpixScore} />
+        <ScoreDisplay score={row.results[row.results.length - 1].vulpixScore} />
       ) : (
         <Text color="gray.400">No Data</Text>
       ),
@@ -128,7 +128,7 @@ export const tableWithOrderAndCategory = [
     key: 'vulpixScore',
     render: (row) =>
       row.results[0] ? (
-        <ScoreDisplay score={row.results[0].vulpixScore} />
+        <ScoreDisplay score={row.results[row.results.length - 1].vulpixScore} />
       ) : (
         <Text color="gray.400">No Data</Text>
       ),

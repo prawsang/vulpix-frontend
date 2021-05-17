@@ -1,34 +1,23 @@
 import { Box, Text } from '@chakra-ui/react'
 import Progress from 'components/common/Progress'
+import { getColor, getText } from 'utils/score'
 
 type Props = {
   score: number
 }
 
 const ScoreDisplay = ({ score }: Props) => {
-  const getColor = () => {
-    if (score < 30) return 'success.500'
-    if (score >= 70) return 'error.500'
-    return 'warning.500'
-  }
-
-  const getText = () => {
-    if (score < 30) return 'Low Risk'
-    if (score >= 70) return 'High Risk'
-    return 'Fair'
-  }
-
   return (
     <Box width="100%">
       <Box pb="4px">
-        <Text fontWeight="bold" fontSize="md" color={getColor()}>
+        <Text fontWeight="bold" fontSize="md" color={getColor(score)}>
           {score}
         </Text>
-        <Text fontSize="xs" color={getColor()}>
-          {getText()}
+        <Text fontSize="xs" color={getColor(score)}>
+          {getText(score)}
         </Text>
       </Box>
-      <Progress colorScheme={getColor()} value={score} />
+      <Progress colorScheme={getColor(score)} value={score} />
     </Box>
   )
 }

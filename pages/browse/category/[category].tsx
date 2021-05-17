@@ -36,7 +36,7 @@ const Browse = () => {
   }, [router.isReady, page, category])
 
   return (
-    <DefaultLayout pageName="Browse">
+    <DefaultLayout pageName={categoryMap[category]}>
       <Container mb="64px">
         <Box pt="64px" pb="64px" textAlign="center" maxWidth="800px" mx="auto">
           <Heading size="md" color="accent.500" textTransform="uppercase" mb="32px">
