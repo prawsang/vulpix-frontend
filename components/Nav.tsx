@@ -1,36 +1,36 @@
-import { Box, Flex, Heading, HStack, Spacer, Container } from '@chakra-ui/react'
+import { Box, Flex, Heading, HStack, Spacer } from '@chakra-ui/react'
 import Link from 'components/common/Link'
+import Container from 'components/common/Container'
 import MobileMenu from './MobileMenu'
 
-const Nav = () => {
+const Nav = ({
+  logoColor = 'primary.500',
+  menuColor = 'gray.500',
+}: {
+  logoColor?: any
+  menuColor?: any
+}) => {
   return (
-    <Box
-      bg="white"
-      position="fixed"
-      top="0"
-      width="100vw"
-      zIndex="999"
-      boxShadow="0 6px 16px rgba(0,0,0,0.1)"
-    >
+    <Box top="0" width="100vw" zIndex="999">
       <Container maxW="1100px">
         <Flex py="8px" alignItems="center">
-          <Heading as="h5" size="lg" color="primary.500" textTransform="uppercase">
+          <Heading as="h5" size="lg" color={logoColor} textTransform="uppercase">
             <Link href="/">VULPIX</Link>
           </Heading>
           <Spacer />
-          <MobileMenu />
+          <MobileMenu iconColor={menuColor} />
           <Box display={{ base: 'none', md: 'block' }}>
             <HStack spacing="48px">
-              <Link href="/browse" color="gray.600">
+              <Link href="/browse" color={{ base: 'gray.500', md: menuColor }}>
                 Browse
               </Link>
-              <Link href="/request" color="gray.600">
+              <Link href="/request" color={{ base: 'gray.500', md: menuColor }}>
                 Request Testing
               </Link>
-              <Link href="/stats" color="gray.600">
+              <Link href="/stats" color={{ base: 'gray.500', md: menuColor }}>
                 Statistics
               </Link>
-              <Link href="/about" color="gray.600">
+              <Link href="/about" color={{ base: 'gray.500', md: menuColor }}>
                 About
               </Link>
             </HStack>

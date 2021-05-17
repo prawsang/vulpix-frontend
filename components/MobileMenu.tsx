@@ -18,19 +18,19 @@ const MenuItem = styled(Box)`
   margin: 16px 0;
 `
 
-const MobileMenu = () => {
+const MobileMenu = ({ iconColor }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef() as React.MutableRefObject<HTMLButtonElement>
 
   return (
-    <Box zIndex="1500">
+    <Box>
       <Button
         ref={btnRef}
         onClick={onOpen}
-        bg="transparent"
+        bg="transparent !important"
         display={{ base: 'block', md: 'none' }}
       >
-        <Icon as={MdMenu} boxSize={8} />
+        <Icon as={MdMenu} boxSize={8} color={iconColor} />
       </Button>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose} finalFocusRef={btnRef}>
         <DrawerOverlay>

@@ -5,7 +5,7 @@ import styled from '@emotion/styled'
 interface Column {
   name: string
   key: string
-  render?: (any) => ReactNode
+  render?: (row: any, index?: number) => ReactNode
 }
 
 interface Props extends TableProps {
@@ -22,8 +22,8 @@ const TableWrapper = styled(Box)`
 const Table = (props: Props) => {
   const { columns, rows, ...tableProps } = props
   return (
-    <TableWrapper boxShadow="0 8px 24px rgba(0,0,0,0.1)">
-      <CTable variant="simple" borderRadius="8px" overflow="hidden" {...tableProps}>
+    <TableWrapper boxShadow="0 8px 24px rgba(0,0,0,0.1)" {...tableProps}>
+      <CTable variant="simple" borderRadius="8px" overflow="hidden">
         <Thead bg="gray.300">
           <Tr>
             {columns.map((e) => (
@@ -34,12 +34,9 @@ const Table = (props: Props) => {
         <Tbody>
           {rows.map((row, i) => (
             <Tr key={`${i}-table-row`}>
-              {/* {columns.map((col) => {
-                col.render ? col.render(row) : <Td>{col.key && row[col.key]}</Td>
-              })} */}
               {columns.map((col) => (
                 <Td key={`${row.name}${col.key}${i}`}>
-                  {col.render ? col.render(row) : row[col.key]}
+                  {col.render ? col.render(row, i) : row[col.key]}
                 </Td>
               ))}
             </Tr>

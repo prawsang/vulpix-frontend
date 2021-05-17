@@ -4,17 +4,17 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <Box bg="accent.500">
+    <Box borderTopStyle="solid" borderTopColor="gray.300" borderTopWidth="2px">
       <WideContainer>
         <Flex py="16px" alignItems="center">
           <Link href="/">
-            <Heading size="md" color="white" textTransform="uppercase">
+            <Heading size="md" color="primary.500" textTransform="uppercase">
               VULPIX
             </Heading>
           </Link>
           <Spacer />
           <Box maxWidth="270px" textAlign="right">
-            <Text color="white" fontSize="12px" textDecoration="underline">
+            <Text color="primary.500" fontSize="12px" textDecoration="underline">
               <a href="https://www.cp.eng.chula.ac.th/en/" target="_blank" rel="noreferrer">
                 Department of Computer Engineering, Chulalongkorn University
               </a>

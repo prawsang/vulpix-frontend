@@ -1,31 +1,18 @@
 import { Text, Heading, Flex, Box, VStack } from '@chakra-ui/react'
+import Image from 'next/image'
 import DefaultLayout from 'layouts/default'
 import Container from 'components/common/Container'
 import Divider from 'components/common/Divider'
 import Button from 'components/common/Button'
-import Select from 'components/common/Select'
 import HomeTable from 'components/home/Table'
-import { useState } from 'react'
-import { StatTypes } from 'types/stats'
 import SearchBar from 'components/common/SearchBar'
-
-const statsMode = [
-  {
-    name: StatTypes.mostSearched,
-    label: 'Most Searched on Vulpix',
-  },
-  {
-    name: StatTypes.mostLeakCat,
-    label: 'Most Leaking Application Categories',
-  },
-]
+import ColorBackground from 'components/common/ColorBackground'
 
 const mockData = [
   {
     identifier: 'com.vulpix.vulpix2',
     name: 'My Vulpix Application',
     devName: 'CP44',
-    iconUrl: 'https://picsum.photos/seed/picsum/64/64',
     categorySlug: 'social-networking',
     createdAt: '2021-03-26T21:25:10.308Z',
     updatedAt: '2021-03-26T21:25:23.186Z',
@@ -48,30 +35,29 @@ const mockData = [
 ]
 
 const Home = () => {
-  const [selectedStats, setSelectedStats] = useState(StatTypes.mostSearched)
-  const onStatModeChange = (e) => {
-    setSelectedStats(e.target.value)
-  }
-
   return (
-    <DefaultLayout pageName="Home">
+    <DefaultLayout
+      pageName="Home"
+      menuColor="white"
+      logoColor={{ base: 'white', lg: 'primary.500' }}
+    >
+      <ColorBackground image="/images/home-bg.svg" width="60%" side="right" />
       <Container mb="64px">
         <Flex
-          minHeight="90vh"
-          pt="20vh"
+          pt="64px"
           flexDirection={{
-            md: 'row',
-            base: 'column',
+            lg: 'row',
+            base: 'column-reverse',
           }}
         >
-          <Box flex="1" pr={{ md: 8, base: 0 }}>
-            <Heading>Are your favorite Android apps leaking your personal data?</Heading>
-            <Divider mt="24px" mb="36px" />
-          </Box>
-          <Box flex="1" pl={{ md: 8, base: 0 }}>
-            <Heading as="h3" size="md" color="accent.500" mb="32px">
-              Enter the app’s name below to search on our site for privacy testing results.
-            </Heading>
+          <Box flex="1" pr={{ lg: 8, base: 0 }}>
+            <Box width={{ lg: '80%', base: '100%' }}>
+              <Heading>Are your favorite Android apps leaking your personal data?</Heading>
+              <Divider mt="24px" mb="36px" />
+              <Heading as="h3" size="md" color="accent.500" mb="32px">
+                Enter the app’s name below to search on our site for privacy testing results.
+              </Heading>
+            </Box>
             <Box position="relative">
               <SearchBar />
             </Box>
@@ -79,9 +65,10 @@ const Home = () => {
               mt="32px"
               mb="48px"
               textAlign={{
-                md: 'left',
+                lg: 'left',
                 base: 'center',
               }}
+              width={{ lg: '80%', base: '100%' }}
             >
               <Text mb="8px" color="gray.600">
                 Can&apos;t find you application?
@@ -92,61 +79,58 @@ const Home = () => {
               <Button>Request Testing</Button>
             </Box>
           </Box>
+          <Box flex="1" width="100%" pl={{ lg: 8, base: 0 }}>
+            <Image
+              src="/images/home-img.svg"
+              alt=""
+              layout="responsive"
+              width={1000}
+              height={1000}
+            />
+          </Box>
         </Flex>
       </Container>
-      <Container maxWidth="800px">
+      <Container maxWidth="900px">
         <VStack spacing="32px">
-          <Heading
-            as="h3"
-            size="md"
-            color="accent.500"
-            textTransform="uppercase"
-            textAlign="center"
-          >
+          <Heading as="h3" size="sm" color="gray.500" textTransform="uppercase" textAlign="center">
             Statistics
           </Heading>
-          <Box textAlign="center" maxWidth="100%">
-            <Select
-              placeholder="Select Option"
-              variant="filled"
-              width="500px"
-              maxWidth="100%"
-              value={selectedStats}
-              onChange={onStatModeChange}
-            >
-              {statsMode.map((e) => (
-                <option value={e.name} key={e.name}>
-                  {e.label}
-                </option>
-              ))}
-            </Select>
-          </Box>
+          <Heading size="lg" color="accent.500" textAlign="center" marginTop="16px !important">
+            Most Leaking Applications on VULPIX
+          </Heading>
           <HomeTable data={mockData} />
         </VStack>
         <Box textAlign="center">
-          <Button my="64px">See More</Button>
+          <Button my="64px">See All Statistics</Button>
         </Box>
       </Container>
-      <Container maxWidth="600px">
+      <Container>
         <Box paddingY="64px" mb="32px">
-          <Divider mx="auto" mb="48px" />
-          <Box textAlign="center">
-            <Heading size="lg" color="accent.500" mb="48px">
-              About VULPIX
-            </Heading>
-            <Text color="gray.700" textAlign="left" mb="48px">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
-            </Text>
-            <Text fontWeight="600" mb="32px">
-              Want to learn more about our testing methods?
-            </Text>
-            <Button m="auto">About Testing</Button>
-          </Box>
+          <Flex
+            flexDirection={{
+              md: 'row',
+              base: 'column',
+            }}
+            alignItems="center"
+          >
+            <Box flex="1" pr={{ md: 16, base: 0 }} width={{ base: '70%', md: '100%' }}>
+              <Image src="/images/about.svg" alt="" width={100} height={100} layout="responsive" />
+            </Box>
+            <Box flex="1" pl={{ md: 16, base: 0 }} my={6}>
+              <Heading size="lg" color="accent.500" mb="48px">
+                About VULPIX
+              </Heading>
+              <Text color="gray.700" textAlign="left" mb="48px">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </Text>
+              <Text fontWeight="600" mb="32px">
+                Want to learn more about our testing methods?
+              </Text>
+              <Button m="auto">About Testing</Button>
+            </Box>
+          </Flex>
         </Box>
       </Container>
     </DefaultLayout>
