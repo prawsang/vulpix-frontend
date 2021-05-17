@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="341.612" height="393.246" viewBox="0 0 341.612 393.246">
+  <g id="Group_79" data-name="Group 79" transform="translate(-804 -96.754)">
+    <g id="Group_78" data-name="Group 78" transform="translate(30)">
+      <rect id="Rectangle_50" data-name="Rectangle 50" width="164" height="284" rx="15" transform="translate(774 206)" fill="#26282b"/>
+      <rect id="Rectangle_51" data-name="Rectangle 51" width="137" height="53" transform="translate(788 220)" fill="#4e5155"/>
+      <circle id="Ellipse_13" data-name="Ellipse 13" cx="5.5" cy="5.5" r="5.5" transform="translate(800 241)" fill="#50c934"/>
+      <circle id="Ellipse_14" data-name="Ellipse 14" cx="5.5" cy="5.5" r="5.5" transform="translate(817 241)" fill="#50c934"/>
+      <circle id="Ellipse_15" data-name="Ellipse 15" cx="5.5" cy="5.5" r="5.5" transform="translate(834 241)" fill="#50c934"/>
+      <rect id="Rectangle_52" data-name="Rectangle 52" width="137" height="53" transform="translate(788 280)" fill="#4e5155"/>
+      <circle id="Ellipse_16" data-name="Ellipse 16" cx="5.5" cy="5.5" r="5.5" transform="translate(851 301)" fill="#eb4b4b"/>
+      <circle id="Ellipse_17" data-name="Ellipse 17" cx="5.5" cy="5.5" r="5.5" transform="translate(834 301)" fill="#50c934"/>
+      <rect id="Rectangle_53" data-name="Rectangle 53" width="137" height="53" transform="translate(788 340)" fill="#4e5155"/>
+      <rect id="Rectangle_54" data-name="Rectangle 54" width="137" height="53" transform="translate(788 401)" fill="#4e5155"/>
+      <circle id="Ellipse_18" data-name="Ellipse 18" cx="5.5" cy="5.5" r="5.5" transform="translate(868 361)" fill="#50c934"/>
+      <circle id="Ellipse_19" data-name="Ellipse 19" cx="5.5" cy="5.5" r="5.5" transform="translate(800 361)" fill="#eb4b4b"/>
+      <circle id="Ellipse_20" data-name="Ellipse 20" cx="5.5" cy="5.5" r="5.5" transform="translate(868 422)" fill="#50c934"/>
+      <circle id="Ellipse_21" data-name="Ellipse 21" cx="5.5" cy="5.5" r="5.5" transform="translate(885 422)" fill="#eb4b4b"/>
+      <circle id="Ellipse_22" data-name="Ellipse 22" cx="5.5" cy="5.5" r="5.5" transform="translate(902 422)" fill="#50c934"/>
+    </g>
+    <g id="Group_10" data-name="Group 10" transform="translate(914.305 82.754)">
+      <g id="Mobile3" transform="translate(11 64.006)">
+        <rect id="Container" width="121.219" height="230.24" rx="8" fill="#c5cfd6"/>
+        <circle id="Touch" cx="11.436" cy="11.436" r="11.436" transform="translate(48.792 192.883)" fill="#fff"/>
+        <g id="Camera" transform="translate(48.792 12.198)">
+          <circle id="Lens" cx="1.525" cy="1.525" r="1.525" fill="#fff"/>
+          <rect id="Sensor" width="16.01" height="3.05" rx="1.525" transform="translate(6.861)" fill="#fff"/>
+        </g>
+        <g id="Rows" transform="translate(10.673 21.347)">
+          <g id="Row">
+            <rect id="Background" width="99.872" height="41.169" rx="4" fill="#fff"/>
+            <g id="Text" transform="translate(29.733 12.351)">
+              <rect id="Name" width="55.654" height="6.175" rx="3" fill="#dde3e9"/>
+              <rect id="Name-2" data-name="Name" width="37.357" height="6.175" rx="3" transform="translate(0 10.292)" fill="#dde3e9"/>
+            </g>
+            <circle id="Avatar" cx="9.149" cy="9.149" r="9.149" transform="translate(6.861 11.436)" fill="#c5cfd6"/>
+          </g>
+          <g id="Row-2" data-name="Row" transform="translate(0 47.268)">
+            <rect id="Background-2" data-name="Background" width="99.872" height="32.02" rx="4" fill="#fff"/>
+            <g id="Text-2" data-name="Text" transform="translate(29.733 9.606)">
+              <rect id="Name-3" data-name="Name" width="55.654" height="4.803" rx="2.402" fill="#dde3e9"/>
+              <rect id="Name-4" data-name="Name" width="37.357" height="4.803" rx="2.402" transform="translate(0 8.005)" fill="#dde3e9"/>
+            </g>
+            <circle id="Avatar-2" data-name="Avatar" cx="9.149" cy="9.149" r="9.149" transform="translate(6.861 6.861)" fill="#c5cfd6"/>
+          </g>
+          <g id="Row-3" data-name="Row" transform="translate(0 85.387)">
+            <rect id="Background-3" data-name="Background" width="99.872" height="32.02" rx="4" fill="#fff"/>
+            <g id="Text-3" data-name="Text" transform="translate(29.733 9.606)">
+              <rect id="Name-5" data-name="Name" width="55.654" height="4.803" rx="2.402" fill="#dde3e9"/>
+              <rect id="Name-6" data-name="Name" width="37.357" height="4.803" rx="2.402" transform="translate(0 8.005)" fill="#dde3e9"/>
+            </g>
+            <circle id="Avatar-3" data-name="Avatar" cx="9.149" cy="9.149" r="9.149" transform="translate(6.861 6.861)" fill="#afb9c5"/>
+          </g>
+          <g id="Row-4" data-name="Row" transform="translate(0 123.506)">
+            <rect id="Background-4" data-name="Background" width="99.872" height="32.02" rx="4" fill="#fff"/>
+            <g id="Text-4" data-name="Text" transform="translate(29.733 9.606)">
+              <rect id="Name-7" data-name="Name" width="55.654" height="4.803" rx="2.402" fill="#dde3e9"/>
+              <rect id="Name-8" data-name="Name" width="37.357" height="4.803" rx="2.402" transform="translate(0 8.005)" fill="#dde3e9"/>
+            </g>
+            <circle id="Avatar-4" data-name="Avatar" cx="9.149" cy="9.149" r="9.149" transform="translate(6.861 6.861)" fill="#c5cfd6"/>
+          </g>
+        </g>
+      </g>
+      <g id="Graph" transform="translate(231.307 55.654) rotate(90)">
+        <rect id="Value" width="4.574" height="38.831" rx="2.287" transform="translate(0 49.704)" fill="#fff"/>
+        <rect id="Value-2" data-name="Value" width="4.574" height="63.683" rx="2.287" transform="translate(10.673 24.852)" fill="#fff"/>
+        <rect id="Value-3" data-name="Value" width="4.574" height="76.109" rx="2.287" transform="translate(21.347 12.426)" fill="#fff"/>
+        <rect id="Value-4" data-name="Value" width="4.574" height="63.683" rx="2.287" transform="translate(32.02 24.852)" fill="#fff"/>
+        <rect id="Value-5" data-name="Value" width="4.574" height="88.535" rx="2.287" transform="translate(42.693)" fill="#fff"/>
+      </g>
+      <g id="Graph-2" data-name="Graph" transform="translate(186.228 111.308) rotate(90)">
+        <rect id="Value-6" data-name="Value" width="4.574" height="19.06" rx="2.287" transform="translate(0 24.396)" fill="#fff"/>
+        <rect id="Value-7" data-name="Value" width="4.574" height="31.258" rx="2.287" transform="translate(10.673 12.198)" fill="#fff"/>
+        <rect id="Value-8" data-name="Value" width="4.574" height="37.357" rx="2.287" transform="translate(21.347 6.099)" fill="#fff"/>
+        <rect id="Value-9" data-name="Value" width="4.574" height="31.258" rx="2.287" transform="translate(32.02 12.198)" fill="#fff"/>
+        <rect id="Value-10" data-name="Value" width="4.574" height="43.456" rx="2.287" transform="translate(42.693)" fill="#fff"/>
+      </g>
+      <text id="_" data-name="&gt;" transform="translate(140.695 47)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" font-size="32" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">&gt;</tspan></text>
+      <rect id="Value-11" data-name="Value" width="4.574" height="17.831" rx="2.287" transform="translate(176.915 43.693) rotate(90)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
