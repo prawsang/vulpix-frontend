@@ -7,11 +7,14 @@ export const tableWithCategory = [
   {
     name: 'Application Name',
     key: 'name',
-    render: (row) => (
-      <Link color="primary.500" href={`/browse/application/${row.identifier}`}>
-        {row.name}
-      </Link>
-    ),
+    render: (row) =>
+      row.results[0] ? (
+        <Link color="primary.500" href={`/browse/application/${row.identifier}`}>
+          {row.name}
+        </Link>
+      ) : (
+        <Text color="gray.700">{row.name}</Text>
+      ),
   },
   {
     name: 'Category',
@@ -42,11 +45,14 @@ export const tableWithoutCategory = [
   {
     name: 'Application Name',
     key: 'name',
-    render: (row) => (
-      <Link color="primary.500" href={`/browse/application/${row.identifier}`}>
-        {row.name}
-      </Link>
-    ),
+    render: (row) =>
+      row.results[0] ? (
+        <Link color="primary.500" href={`/browse/application/${row.identifier}`}>
+          {row.name}
+        </Link>
+      ) : (
+        <Text color="gray.700">{row.name}</Text>
+      ),
   },
   {
     name: 'Developer',
@@ -73,11 +79,14 @@ export const tableWithOrder = [
   {
     name: 'Application Name',
     key: 'name',
-    render: (row) => (
-      <Link color="primary.500" href={`/browse/application/${row.identifier}`}>
-        {row.name}
-      </Link>
-    ),
+    render: (row) =>
+      row.results[0] ? (
+        <Link color="primary.500" href={`/browse/application/${row.identifier}`}>
+          {row.name}
+        </Link>
+      ) : (
+        <Text color="gray.700">{row.name}</Text>
+      ),
   },
   {
     name: 'Developer',
@@ -104,11 +113,14 @@ export const tableWithOrderAndCategory = [
   {
     name: 'Application Name',
     key: 'name',
-    render: (row) => (
-      <Link color="primary.500" href={`/browse/application/${row.identifier}`}>
-        {row.name}
-      </Link>
-    ),
+    render: (row) =>
+      row.results[0] ? (
+        <Link color="primary.500" href={`/browse/application/${row.identifier}`}>
+          {row.name}
+        </Link>
+      ) : (
+        <Text color="gray.700">{row.name}</Text>
+      ),
   },
   {
     name: 'Category',
