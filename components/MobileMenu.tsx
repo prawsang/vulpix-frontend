@@ -38,12 +38,12 @@ const MobileMenu = ({ iconColor }) => {
             <DrawerCloseButton boxSize={8} />
             <DrawerBody pt="64px">
               <MenuItem>
-                <Link href="/" color="gray.600">
+                <Link href="/browse" color="gray.600">
                   Browse
                 </Link>
               </MenuItem>
               <MenuItem>
-                <Link href="/" color="gray.600">
+                <Link href="/request" color="gray.600">
                   Request Testing
                 </Link>
               </MenuItem>

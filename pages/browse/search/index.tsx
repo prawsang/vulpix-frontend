@@ -52,7 +52,7 @@ const Browse = () => {
         </Flex>
         <Box maxWidth="800px" marginX="auto">
           <CategorySelect pt="96px" pb="64px" />
-          <CTA mt="64px" />
+          <CTA />
         </Box>
       </Container>
     </DefaultLayout>

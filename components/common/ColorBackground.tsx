@@ -5,17 +5,19 @@ const ColorBackground = ({
   image,
   width = '55%',
   side = 'right',
+  top,
 }: {
   image: string
   width: string
   side: 'left' | 'right'
+  top?: any
 }) => {
   return (
     <Box
       position="absolute"
       width={{ base: '120%', lg: width }}
       right={side === 'right' ? 0 : 'initial'}
-      top={{ base: '-10%', lg: '-5%' }}
+      top={top || { base: '-10%', lg: '-5%' }}
       left={side === 'left' ? 0 : 'initial'}
       zIndex="-1"
     >

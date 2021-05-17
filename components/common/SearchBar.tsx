@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import Input from 'components/common/Input'
-import { InputGroup, InputRightElement, Icon } from '@chakra-ui/react'
+import { InputGroup, InputRightElement, Icon, InputGroupProps } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import { MdSearch } from 'react-icons/md'
 
-const SearchBar = () => {
+const SearchBar = (props: InputGroupProps) => {
   const router = useRouter()
   const query = router.query.query as string
   const [searchText, setSearchText] = useState(query || '')
@@ -20,8 +20,8 @@ const SearchBar = () => {
 
   return (
     <form onSubmit={onSearch}>
-      <InputGroup my="32px">
-        <Input placeholder="Search" onChange={onChange} value={searchText} />
+      <InputGroup my="32px" {...props}>
+        <Input placeholder="Search" onChange={onChange} value={searchText} width="100%" />
         <InputRightElement>
           <Icon as={MdSearch} boxSize={6} />
         </InputRightElement>

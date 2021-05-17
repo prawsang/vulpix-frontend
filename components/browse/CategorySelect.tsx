@@ -21,7 +21,7 @@ const CategorySelect = (props: BoxProps) => {
       <Heading size="sm" color="gray.600" mb="32px" textAlign="center" textTransform="uppercase">
         Browse By Category
       </Heading>
-      <Grid templateColumns="repeat(4, 1fr)" gap={6}>
+      <Grid templateColumns={{ md: 'repeat(4, 1fr)', base: 'repeat(2, 1fr)' }} gap={6}>
         {categories.map((cat) => (
           <CategoryCard
             name={cat.name}
