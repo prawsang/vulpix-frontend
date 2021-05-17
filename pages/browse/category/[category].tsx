@@ -33,7 +33,7 @@ const Browse = () => {
     if (router.isReady) {
       fetchData()
     }
-  }, [router.isReady, page])
+  }, [router.isReady, page, category])
 
   return (
     <DefaultLayout pageName="Browse">
