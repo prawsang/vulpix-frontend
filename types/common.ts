@@ -87,3 +87,10 @@ export const criterionMap = {
   webBrowsingLog: 'Web Browsing Log',
   gps: 'GPS (Latitude, Longitude)',
 }
+
+export const TESTING_METHOD = {
+  OLD: 'OLD',
+  STATIC_ONLY: 'STATIC_ONLY',
+  DYNAMIC_ONLY: 'DYNAMIC_ONLY',
+  COMPLETE: 'COMPLETE',
+}

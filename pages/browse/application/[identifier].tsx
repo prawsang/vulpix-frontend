@@ -9,7 +9,7 @@ import Select from 'components/common/Select'
 import DefaultLayout from 'layouts/default'
 import { useEffect, useState } from 'react'
 import { getColor, getText } from 'utils/score'
-import { Result, criterionMap } from 'types/common'
+import { Result, criterionMap, TESTING_METHOD } from 'types/common'
 import Progress from 'components/common/Progress'
 import Link from 'next/link'
 import { FaExclamationCircle, FaCheckCircle } from 'react-icons/fa'
@@ -38,6 +38,19 @@ const leakageCheck = (result) => {
   return l
 }
 
+const getTestingMethodText = (testingMethod) => {
+  switch (testingMethod) {
+    case TESTING_METHOD.COMPLETE:
+      return 'VULPIX 2.0 Dynamic and Static Testing'
+    case TESTING_METHOD.STATIC_ONLY:
+      return 'VULPIX 2.0 Static Testing'
+    case TESTING_METHOD.DYNAMIC_ONLY:
+      return 'VULPIX 2.0 Dynamic Testing'
+    case TESTING_METHOD.OLD:
+      return 'VULPIX 1.0 Dynamic and Static Testing'
+  }
+}
+
 const ApplicationResult = (props) => {
   const router = useRouter()
 
@@ -56,7 +69,9 @@ const ApplicationResult = (props) => {
       results.forEach((result, i) => {
         op.push({
           index: i,
-          name: `Version ${result.version}, Tested with VULPIX ${result.testingMethod}`,
+          name: `Version ${result.version}, Tested with VULPIX ${
+            result.testingMethod === TESTING_METHOD.OLD ? '1.0' : '2.0'
+          }`,
         })
       })
       if (op.length > 0) {
@@ -111,7 +126,13 @@ const ApplicationResult = (props) => {
             our limited testing period does not mean that the app will not access it when being put
             into use.
           </Text>
-          {currentResult && (
+          {currentResult && currentResult.error && (
+            <Text size="md" mb="64px">
+              An error has occured during the testing of this version of the application. We are
+              sorry for the inconvenience.
+            </Text>
+          )}
+          {currentResult && !currentResult.error && (
             <>
               <Flex direction={{ base: 'column', md: 'row' }}>
                 <Card mr={{ base: 0, md: '8px' }} flex="45%" padding="32px" mb="16px">
@@ -133,14 +154,9 @@ const ApplicationResult = (props) => {
                     value={currentResult!.vulpixScore}
                   />
                   <Text color="gray.500" size="sm" mt="24px" mb="16px">
-                    VULPIX Score indicates the level of the application’s safety. It is acquired by
-                    static testing.
+                    VULPIX Score indicates the level of the application’s safety. The higher the
+                    score, the more information leakage is detected during testing.
                   </Text>
-                  <Link href="/about">
-                    <Text size="sm" color="primary.500" cursor="pointer" textDecor="underline">
-                      Learn more about testing methods
-                    </Text>
-                  </Link>
                 </Card>
                 <Card ml={{ base: 0, md: '8px' }} flex="55%" padding="32px" mb="16px">
                   <Heading textAlign="center" size="md" color="gray.700" pb="32px">
@@ -185,12 +201,23 @@ const ApplicationResult = (props) => {
                 size="md"
                 color="accent.500"
                 mt="64px"
-                mb="48px"
+                mb="32px"
                 textAlign="center"
                 textTransform="uppercase"
               >
                 Details
               </Heading>
+              <Box mb="64px">
+                <Heading size="sm" color="gray.600" mb="8px">
+                  Testing Method: {getTestingMethodText(currentResult!.testingMethod)}
+                </Heading>
+                <Link href="/about">
+                  <Text size="sm" color="primary.500" cursor="pointer" textDecor="underline">
+                    Learn more about testing methods
+                  </Text>
+                </Link>
+              </Box>
+
               <CriterionTable
                 results={{
                   advertiserId: currentResult!.advertiserId,
