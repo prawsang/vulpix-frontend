@@ -174,7 +174,7 @@ const ApplicationResult = (props) => {
                       color={leakage.length > 0 ? 'error.500' : 'success.500'}
                       size="md"
                       pl="16px"
-                      mb="16px"
+                      mb="0"
                     >
                       {leakage.length > 0 ? 'Leakage Detected' : 'Leakage Not Detected'}
                     </Heading>
@@ -225,13 +225,13 @@ const ApplicationResult = (props) => {
                   deviceSerialNumber: currentResult!.deviceSerialNumber,
                   googleServicesId: currentResult!.googleServicesId,
                   imei: currentResult!.imei,
+                  macAddress: currentResult!.macAddress,
                 }}
                 name="Device Information"
                 mb="32px"
               />
               <CriterionTable
                 results={{
-                  macAddress: currentResult!.macAddress,
                   cellId: currentResult!.cellId,
                   simSerialNumber: currentResult!.simSerialNumber,
                   imsi: currentResult!.imsi,

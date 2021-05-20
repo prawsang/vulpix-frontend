@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react'
 import { categoryMap } from 'utils/categoryMap'
 import ScoreDisplay from 'components/common/ScoreDisplay'
 import CTA from 'components/common/CTA'
+import { isNil } from 'lodash'
 
 interface DataType {
   identifier: string
@@ -49,7 +50,7 @@ const tableWithCategory = [
     name: 'Vulpix Score',
     key: 'vulpixScore',
     render: (row) =>
-      row.vulpixScore ? (
+      !isNil(row.vulpixScore) ? (
         <ScoreDisplay score={row.vulpixScore} />
       ) : (
         <Text color="gray.400">No Data</Text>
@@ -85,7 +86,7 @@ const ByScore = () => {
               Statistics
             </Heading>
             <Heading size="lg" color="accent.500" textAlign="center" marginTop="16px !important">
-              Most Leaking Applications on VULPIX
+              100 Most Leaking Applications on VULPIX
             </Heading>
           </VStack>
         </Box>

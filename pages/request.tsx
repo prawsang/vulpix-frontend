@@ -2,27 +2,14 @@ import { useState } from 'react'
 import { isEmpty } from 'lodash'
 import DefaultLayout from 'layouts/default'
 import qs from 'qs'
-import {
-  Box,
-  ButtonGroup,
-  Flex,
-  Heading,
-  // InputRightElement,
-  // Icon,
-  // Flex,
-  Text,
-  // InputGroup,
-  // Spacer,
-} from '@chakra-ui/react'
-// import { MdSearch } from 'react-icons/md'
-// import Select from 'components/common/Select'
+import { Box, ButtonGroup, Flex, Heading, Text } from '@chakra-ui/react'
 import Container from 'components/common/Container'
 import Input from 'components/common/Input'
-// import Link from 'components/common/Link'
 import Button from 'components/common/Button'
 import { sendTestingRequest } from 'api/testing'
 import ColorBackground from 'components/common/ColorBackground'
 import Image from 'next/image'
+import { urlRegex } from 'utils/regex'
 
 const Request = () => {
   const [appUrl, setAppUrl] = useState('')
@@ -37,7 +24,7 @@ const Request = () => {
   }
 
   const onNext = () => {
-    if (isEmpty(appUrl)) {
+    if (isEmpty(appUrl) || !appUrl.match(urlRegex)) {
       setUrlError(true)
     } else {
       setStep(step + 1)
@@ -146,7 +133,7 @@ const Request = () => {
               )}
               {urlError && (
                 <Box mt="16px">
-                  <Text color="error.500">Please enter a URL.</Text>
+                  <Text color="error.500">Please enter a valid URL.</Text>
                 </Box>
               )}
             </Box>
