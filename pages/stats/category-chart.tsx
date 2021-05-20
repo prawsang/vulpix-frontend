@@ -54,9 +54,6 @@ const CategoryChart = () => {
     fetchData()
   }, [])
 
-  console.log(labels)
-  console.log(chartData)
-
   const chartConfig = {
     labels,
     datasets: [
