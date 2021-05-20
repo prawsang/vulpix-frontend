@@ -48,12 +48,12 @@ const MobileMenu = ({ iconColor }) => {
                 </Link>
               </MenuItem>
               <MenuItem>
-                <Link href="/" color="gray.600">
+                <Link href="/stats" color="gray.600">
                   Statistics
                 </Link>
               </MenuItem>
               <MenuItem>
-                <Link href="/" color="gray.600">
+                <Link href="/about" color="gray.600">
                   About
                 </Link>
               </MenuItem>

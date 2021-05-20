@@ -15,7 +15,7 @@ const Nav = ({
       <Container maxW="1100px">
         <Flex py="8px" alignItems="center">
           <Heading as="h5" size="lg" color={logoColor} textTransform="uppercase">
-            <Link href="/">VULPIX</Link>
+            <Link href="/">VULPIX II</Link>
           </Heading>
           <Spacer />
           <MobileMenu iconColor={menuColor} />
