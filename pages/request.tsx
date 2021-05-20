@@ -9,12 +9,20 @@ import Button from 'components/common/Button'
 import { sendTestingRequest } from 'api/testing'
 import ColorBackground from 'components/common/ColorBackground'
 import Image from 'next/image'
-import { urlRegex } from 'utils/regex'
+import { emailRegex, urlRegex } from 'utils/regex'
+
+const addhttp = (url) => {
+  if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
+    url = 'http://' + url
+  }
+  return url
+}
 
 const Request = () => {
   const [appUrl, setAppUrl] = useState('')
   const [error, setError] = useState(false)
   const [urlError, setUrlError] = useState(false)
+  const [emailError, setEmailError] = useState(false)
   const [email, setEmail] = useState('')
 
   const [step, setStep] = useState(0)
@@ -40,14 +48,20 @@ const Request = () => {
   }
 
   const onRequestClick = async () => {
-    const url = new URL(appUrl)
-    const q = qs.parse(url.search.substring(1))
-    const res = await sendTestingRequest(q['id'])
-    if (res && res.data) {
-      setStep(step + 1)
+    if (!isEmpty(email) && !email.match(emailRegex)) {
+      setEmailError(true)
       setError(false)
     } else {
-      setError(true)
+      setEmailError(false)
+      const url = new URL(addhttp(appUrl))
+      const q = qs.parse(url.search.substring(1))
+      const res = await sendTestingRequest(q['id'], email)
+      if (res && res.data) {
+        setStep(step + 1)
+        setError(false)
+      } else {
+        setError(true)
+      }
     }
   }
 
@@ -137,6 +151,11 @@ const Request = () => {
                   <Text color="error.500">Please enter a valid URL.</Text>
                 </Box>
               )}
+              {emailError && (
+                <Box mt="16px">
+                  <Text color="error.500">Please enter a valid email address.</Text>
+                </Box>
+              )}
             </Box>
           </Box>
           <Box
@@ -156,43 +175,6 @@ const Request = () => {
           </Box>
         </Flex>
       </Container>
-
-      {/* <Heading as="h3" size="sm" textTransform="uppercase">
-            Details
-          </Heading>
-          <Flex
-            my="32px"
-            textAlign={{ base: 'center', md: 'left' }}
-            alignItems="flex-end"
-            display={{ base: 'block', md: 'flex' }}
-          >
-            <Flex justifyContent={{ base: 'center', md: 'flex-start' }}>
-              <Box mr="16px">
-                <Text color="gray.500" mb="8px">
-                  Testing Method
-                </Text>
-                <Select>
-                  <option>Static Testing</option>
-                </Select>
-              </Box>
-              <Box>
-                <Text color="gray.500" mb="8px">
-                  Android Version
-                </Text>
-                <Select>
-                  <option>7.0.1</option>
-                </Select>
-              </Box>
-            </Flex>
-            <Spacer />
-            <Box pt="32px">
-              <Text textDecoration="underline">
-                <Link href="/about" color="primary.500">
-                  Learn more about testing methods
-                </Link>
-              </Text>
-            </Box>
-          </Flex> */}
     </DefaultLayout>
   )
 }
