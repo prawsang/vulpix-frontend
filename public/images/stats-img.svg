@@ -1,7 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="346.062" height="366.881" viewBox="0 0 346.062 366.881">
-  <g id="Group_77" data-name="Group 77" transform="translate(-150.5 -91.56)">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="418.062" height="439.881" viewBox="0 0 418.062 439.881">
+  <defs>
+    <filter id="Container" x="0" y="11.44" width="418.062" height="428.44" filterUnits="userSpaceOnUse">
+      <feOffset dx="-10" dy="22" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="17" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_77" data-name="Group 77" transform="translate(-119.5 -91.56)">
     <g id="Web" transform="translate(150.5 91.56)">
-      <rect id="Container" width="316.062" height="242.44" rx="8" fill="#f2f2f2"/>
+      <rect id="Container-2" data-name="Container" width="316.062" height="242.44" rx="8" fill="#f2f2f2"/>
       <rect id="Background" width="66.043" height="76.421" rx="8" transform="translate(234.924 40.569)" fill="#fff"/>
       <g id="Profile_Info" data-name="Profile Info" transform="translate(244.359 54.721)">
         <circle id="Avatar" cx="15.096" cy="15.096" r="15.096" transform="translate(8.491)" fill="#dde3e9"/>
@@ -26,7 +35,7 @@
       </g>
       <g id="Rows-2" data-name="Rows" transform="translate(15.096 41.513)">
         <g id="Row">
-          <rect id="Container-2" data-name="Container" width="212.281" height="44.343" rx="4" fill="#fff"/>
+          <rect id="Container-3" data-name="Container" width="212.281" height="44.343" rx="4" fill="#fff"/>
           <g id="Text_Stuff" data-name="Text Stuff" transform="translate(8.491 13.303)">
             <rect id="Label" width="157.559" height="6.651" rx="3" fill="#dde3e9"/>
             <rect id="Label-2" data-name="Label" width="105.759" height="6.651" rx="3" transform="translate(0 11.086)" fill="#dde3e9"/>
@@ -37,7 +46,7 @@
           </g>
         </g>
         <g id="Row-2" data-name="Row" transform="translate(0 51.891)">
-          <rect id="Container-3" data-name="Container" width="212.281" height="36.795" rx="4" fill="#fff"/>
+          <rect id="Container-4" data-name="Container" width="212.281" height="36.795" rx="4" fill="#fff"/>
           <g id="Text_Stuff-2" data-name="Text Stuff" transform="translate(8.491 11.039)">
             <rect id="Label-3" data-name="Label" width="157.559" height="5.519" rx="2.76" fill="#dde3e9"/>
             <rect id="Label-4" data-name="Label" width="105.759" height="5.519" rx="2.76" transform="translate(0 9.199)" fill="#dde3e9"/>
@@ -48,7 +57,7 @@
           </g>
         </g>
         <g id="Row-3" data-name="Row" transform="translate(0 96.234)">
-          <rect id="Container-4" data-name="Container" width="212.281" height="36.795" rx="4" fill="#fff"/>
+          <rect id="Container-5" data-name="Container" width="212.281" height="36.795" rx="4" fill="#fff"/>
           <g id="Text_Stuff-3" data-name="Text Stuff" transform="translate(8.491 11.039)">
             <rect id="Label-5" data-name="Label" width="157.559" height="5.519" rx="2.76" fill="#dde3e9"/>
             <rect id="Label-6" data-name="Label" width="105.759" height="5.519" rx="2.76" transform="translate(0 9.199)" fill="#dde3e9"/>
@@ -59,7 +68,7 @@
           </g>
         </g>
         <g id="Row-4" data-name="Row" transform="translate(0 140.577)">
-          <rect id="Container-5" data-name="Container" width="212.281" height="36.795" rx="4" fill="#fff"/>
+          <rect id="Container-6" data-name="Container" width="212.281" height="36.795" rx="4" fill="#fff"/>
           <g id="Text_Stuff-4" data-name="Text Stuff" transform="translate(8.491 11.039)">
             <rect id="Label-7" data-name="Label" width="157.559" height="5.519" rx="2.76" fill="#dde3e9"/>
             <rect id="Label-8" data-name="Label" width="105.759" height="5.519" rx="2.76" transform="translate(0 9.199)" fill="#dde3e9"/>
@@ -72,22 +81,24 @@
       </g>
     </g>
     <g id="Web-2" data-name="Web" transform="translate(180.5 132)">
-      <rect id="Container-6" data-name="Container" width="316.062" height="326.44" rx="8" fill="#dde3e9"/>
-      <rect id="Background-7" data-name="Background" width="66.043" height="76.421" rx="8" transform="translate(234.924 40.569)" fill="#fff"/>
+      <g transform="matrix(1, 0, 0, 1, -61, -40.44)" filter="url(#Container)">
+        <path id="Container-7" data-name="Container" d="M8,0H308.062a8,8,0,0,1,8,8V318.44a8,8,0,0,1-8,8H8a8,8,0,0,1-8-8V8A8,8,0,0,1,8,0Z" transform="translate(61 40.44)" fill="#4e5155"/>
+      </g>
+      <path id="Background-7" data-name="Background" d="M8,0H58.043a8,8,0,0,1,8,8V68.421a8,8,0,0,1-8,8H8a8,8,0,0,1-8-8V8A8,8,0,0,1,8,0Z" transform="translate(234.924 40.569)" fill="#73787e"/>
       <g id="Profile_Info-2" data-name="Profile Info" transform="translate(244.359 54.721)">
         <circle id="Avatar-2" data-name="Avatar" cx="15.096" cy="15.096" r="15.096" transform="translate(8.491)" fill="#dde3e9"/>
         <rect id="Name-3" data-name="Name" width="47.173" height="5.661" rx="2.83" transform="translate(0 33.965)" fill="#dde3e9"/>
         <rect id="Name-4" data-name="Name" width="32.078" height="5.661" rx="2.83" transform="translate(7.548 43.4)" fill="#dde3e9"/>
       </g>
-      <path id="Header-2" data-name="Header" d="M8,0H308.062a8,8,0,0,1,8,8V25.474a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V8A8,8,0,0,1,8,0Z" fill="#c5cfd6"/>
+      <path id="Header-2" data-name="Header" d="M8,0H308.062a8,8,0,0,1,8,8V25.474H0V8A8,8,0,0,1,8,0Z" fill="#26282b"/>
       <g id="Buttons-5" data-name="Buttons" transform="translate(8.491 9.435)">
-        <circle id="buttons-6" data-name="buttons" cx="3.774" cy="3.774" r="3.774" fill="#f2f2f2"/>
-        <circle id="buttons-7" data-name="buttons" cx="3.774" cy="3.774" r="3.774" transform="translate(11.322)" fill="#f2f2f2"/>
-        <circle id="buttons-8" data-name="buttons" cx="3.774" cy="3.774" r="3.774" transform="translate(22.643)" fill="#f2f2f2"/>
+        <circle id="buttons-6" data-name="buttons" cx="3.774" cy="3.774" r="3.774" fill="#eb4b4b"/>
+        <path id="buttons-7" data-name="buttons" d="M3.774,0A3.774,3.774,0,1,1,0,3.774,3.774,3.774,0,0,1,3.774,0Z" transform="translate(11.322)" fill="#f7df31"/>
+        <path id="buttons-8" data-name="buttons" d="M3.774,0A3.774,3.774,0,1,1,0,3.774,3.774,3.774,0,0,1,3.774,0Z" transform="translate(22.643)" fill="#50c934"/>
       </g>
       <g id="Rows-3" data-name="Rows" transform="translate(15.096 41.513)">
         <g id="Row-5" data-name="Row">
-          <rect id="Container-7" data-name="Container" width="212.281" height="44.343" rx="4" fill="#fff"/>
+          <rect id="Container-8" data-name="Container" width="212.281" height="44.343" rx="4" fill="#73787e"/>
           <g id="Text_Stuff-5" data-name="Text Stuff" transform="translate(8.491 13.303)">
             <rect id="Label-9" data-name="Label" width="157.559" height="6.651" rx="3" fill="#dde3e9"/>
             <rect id="Label-10" data-name="Label" width="105.759" height="6.651" rx="3" transform="translate(0 11.086)" fill="#dde3e9"/>
@@ -98,7 +109,7 @@
           </g>
         </g>
         <g id="Row-6" data-name="Row" transform="translate(0 51.891)">
-          <rect id="Container-8" data-name="Container" width="212.281" height="36.795" rx="4" fill="#fff"/>
+          <path id="Container-9" data-name="Container" d="M4,0H208.281a4,4,0,0,1,4,4V32.8a4,4,0,0,1-4,4H4a4,4,0,0,1-4-4V4A4,4,0,0,1,4,0Z" fill="#73787e"/>
           <g id="Text_Stuff-6" data-name="Text Stuff" transform="translate(8.491 11.039)">
             <rect id="Label-11" data-name="Label" width="157.559" height="5.519" rx="2.76" fill="#dde3e9"/>
             <rect id="Label-12" data-name="Label" width="105.759" height="5.519" rx="2.76" transform="translate(0 9.199)" fill="#dde3e9"/>
@@ -109,7 +120,7 @@
           </g>
         </g>
         <g id="Row-7" data-name="Row" transform="translate(0 96.234)">
-          <rect id="Container-9" data-name="Container" width="212.281" height="36.795" rx="4" fill="#fff"/>
+          <rect id="Container-10" data-name="Container" width="212.281" height="36.795" rx="4" fill="#73787e"/>
           <g id="Text_Stuff-7" data-name="Text Stuff" transform="translate(8.491 11.039)">
             <rect id="Label-13" data-name="Label" width="157.559" height="5.519" rx="2.76" fill="#dde3e9"/>
             <rect id="Label-14" data-name="Label" width="105.759" height="5.519" rx="2.76" transform="translate(0 9.199)" fill="#dde3e9"/>
@@ -120,7 +131,7 @@
           </g>
         </g>
         <g id="Row-8" data-name="Row" transform="translate(0 229.263)">
-          <rect id="Container-10" data-name="Container" width="212.281" height="36.795" rx="4" fill="#fff"/>
+          <rect id="Container-11" data-name="Container" width="212.281" height="36.795" rx="4" fill="#73787e"/>
           <g id="Text_Stuff-8" data-name="Text Stuff" transform="translate(8.491 11.039)">
             <rect id="Label-15" data-name="Label" width="157.559" height="5.519" rx="2.76" fill="#dde3e9"/>
             <rect id="Label-16" data-name="Label" width="105.759" height="5.519" rx="2.76" transform="translate(0 9.199)" fill="#dde3e9"/>
@@ -131,7 +142,7 @@
           </g>
         </g>
         <g id="Row-9" data-name="Row" transform="translate(0 184.92)">
-          <rect id="Container-11" data-name="Container" width="212.281" height="36.795" rx="4" fill="#fff"/>
+          <rect id="Container-12" data-name="Container" width="212.281" height="36.795" rx="4" fill="#73787e"/>
           <g id="Text_Stuff-9" data-name="Text Stuff" transform="translate(8.491 11.039)">
             <rect id="Label-17" data-name="Label" width="157.559" height="5.519" rx="2.76" fill="#dde3e9"/>
             <rect id="Label-18" data-name="Label" width="105.759" height="5.519" rx="2.76" transform="translate(0 9.199)" fill="#dde3e9"/>
@@ -142,7 +153,7 @@
           </g>
         </g>
         <g id="Row-10" data-name="Row" transform="translate(0 140.577)">
-          <rect id="Container-12" data-name="Container" width="212.281" height="36.795" rx="4" fill="#fff"/>
+          <rect id="Container-13" data-name="Container" width="212.281" height="36.795" rx="4" fill="#73787e"/>
           <g id="Text_Stuff-10" data-name="Text Stuff" transform="translate(8.491 11.039)">
             <rect id="Label-19" data-name="Label" width="157.559" height="5.519" rx="2.76" fill="#dde3e9"/>
             <rect id="Label-20" data-name="Label" width="105.759" height="5.519" rx="2.76" transform="translate(0 9.199)" fill="#dde3e9"/>
