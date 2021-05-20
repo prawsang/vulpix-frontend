@@ -44,6 +44,7 @@ const Request = () => {
     const q = qs.parse(url.search.substring(1))
     const res = await sendTestingRequest(q['id'])
     if (res && res.data) {
+      setStep(step + 1)
       setError(false)
     } else {
       setError(true)
