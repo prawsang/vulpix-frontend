@@ -13,7 +13,7 @@ const Statistics = () => {
         image="/images/stats-bg.svg"
         side="left"
         width="60%"
-        top={{ base: '-10%', md: '-15%', lg: '-10%' }}
+        top="translateY(-20%)"
       />
       <Container mb="32px">
         <Flex

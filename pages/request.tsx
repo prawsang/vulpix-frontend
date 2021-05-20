@@ -26,7 +26,6 @@ import Image from 'next/image'
 
 const Request = () => {
   const [appUrl, setAppUrl] = useState('')
-  const [sent, setSent] = useState(false)
   const [error, setError] = useState(false)
   const [urlError, setUrlError] = useState(false)
   const [email, setEmail] = useState('')
@@ -41,12 +40,12 @@ const Request = () => {
     if (isEmpty(appUrl)) {
       setUrlError(true)
     } else {
-      setStep(1)
+      setStep(step + 1)
       setUrlError(false)
     }
   }
   const onPrev = () => {
-    setStep(0)
+    setStep(step - 1)
   }
 
   const onEmailChange = (e) => {
@@ -58,22 +57,15 @@ const Request = () => {
     const q = qs.parse(url.search.substring(1))
     const res = await sendTestingRequest(q['id'])
     if (res && res.data) {
-      setSent(true)
       setError(false)
     } else {
       setError(true)
-      setSent(false)
     }
   }
 
   return (
     <DefaultLayout pageName="Request Testing" logoColor={{ base: 'gray.700', lg: 'primary.500' }}>
-      <ColorBackground
-        top={{ base: '-40%', md: '-90%', lg: '-20%' }}
-        image="/images/request-bg.svg"
-        side="right"
-        width="60%"
-      />
+      <ColorBackground image="/images/request-bg.svg" side="right" width="60%" />
       <Container mb="64px">
         <Flex
           pt="64px"
@@ -96,7 +88,7 @@ const Request = () => {
                 You can request the application to be tested on our servers. This takes only a few
                 minutes.
               </Heading>
-              {step === 0 ? (
+              {step === 0 && (
                 <>
                   <Heading size="sm" fontWeight="normal" color="gray.700" mb="16px">
                     Play Store URL
@@ -112,7 +104,8 @@ const Request = () => {
                     <Button onClick={onNext}>Next</Button>
                   </Box>
                 </>
-              ) : (
+              )}
+              {step === 1 && (
                 <>
                   <Heading size="sm" fontWeight="normal" color="gray.700" mb="16px">
                     Your Email (Optional)
@@ -134,12 +127,15 @@ const Request = () => {
                   </Box>
                 </>
               )}
-              {sent && (
-                <Box mt="16px">
+              {step === 2 && (
+                <>
+                  <Heading size="sm" color="gray.700" mb="16px">
+                    The testing request has been sent.
+                  </Heading>
                   <Text color="gray.600">
                     The testing request has been sent. Please wait for the response. Thank you.
                   </Text>
-                </Box>
+                </>
               )}
               {error && (
                 <Box mt="16px">

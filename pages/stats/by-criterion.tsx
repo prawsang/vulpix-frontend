@@ -121,7 +121,7 @@ const ByCriterion = () => {
             color="gray.500"
             transform="translateX(-50%) rotateZ(-90deg)"
           >
-            Number of Times Leakage was Detected During Testing
+            Number of Apps Detected Transmitting the Information
           </Text>
         </Box>
         <Box mb="64px" />

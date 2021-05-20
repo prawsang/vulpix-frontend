@@ -14,9 +14,13 @@ export const byCriterion = async () => {
   return res
 }
 
-export const byScore = async (category?: string) => {
+export const byScore = async (category?: string, limit?: string) => {
   const res = await axios
-    .get(`${baseUrl}/stats/by-score${category ? `?category=${category}` : ''}`)
+    .get(
+      `${baseUrl}/stats/by-score${category ? `?category=${category}` : ''}${
+        limit ? `?limit=${limit}` : ''
+      }`,
+    )
     .catch((err) => console.log(err))
   return res
 }

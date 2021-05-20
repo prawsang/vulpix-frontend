@@ -7,34 +7,22 @@ import Button from 'components/common/Button'
 import HomeTable from 'components/home/Table'
 import SearchBar from 'components/common/SearchBar'
 import ColorBackground from 'components/common/ColorBackground'
-
-const mockData = [
-  {
-    identifier: 'com.vulpix.vulpix2',
-    name: 'My Vulpix Application',
-    devName: 'CP44',
-    categorySlug: 'social-networking',
-    createdAt: '2021-03-26T21:25:10.308Z',
-    updatedAt: '2021-03-26T21:25:23.186Z',
-    results: [
-      {
-        vulpixScore: 70,
-      },
-    ],
-  },
-  {
-    identifier: 'com.plakim.party',
-    name: 'I love to party',
-    devName: 'Plakim',
-    iconUrl: null,
-    categorySlug: 'social-networking',
-    createdAt: '2021-03-26T21:25:10.308Z',
-    updatedAt: '2021-03-26T21:25:23.186Z',
-    results: [],
-  },
-]
+import { useEffect, useState } from 'react'
+import { byScore } from 'api/stats'
+import Link from 'next/link'
 
 const Home = () => {
+  const [data, setData] = useState()
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await byScore(undefined, '5')
+      if (res && res.data) {
+        setData(res.data)
+      }
+    }
+    fetchData()
+  }, [])
+
   return (
     <DefaultLayout
       pageName="Home"
@@ -98,11 +86,13 @@ const Home = () => {
           <Heading size="lg" color="accent.500" textAlign="center" marginTop="16px !important">
             Most Leaking Applications on VULPIX
           </Heading>
-          <HomeTable data={mockData} />
+          <HomeTable data={data} />
         </VStack>
-        <Box textAlign="center">
-          <Button my="64px">See All Statistics</Button>
-        </Box>
+        <Link href="/stats">
+          <Box textAlign="center">
+            <Button my="64px">See All Statistics</Button>
+          </Box>
+        </Link>
       </Container>
       <Container>
         <Box paddingY="64px" mb="32px">

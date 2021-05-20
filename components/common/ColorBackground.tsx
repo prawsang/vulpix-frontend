@@ -10,14 +10,15 @@ const ColorBackground = ({
   image: string
   width: string
   side: 'left' | 'right'
-  top?: any
+  top?: string
 }) => {
   return (
     <Box
       position="absolute"
       width={{ base: '120%', lg: width }}
       right={side === 'right' ? 0 : 'initial'}
-      top={top || { base: '-10%', lg: '-5%' }}
+      top="0"
+      transform={top || 'translateY(-15%)'}
       left={side === 'left' ? 0 : 'initial'}
       zIndex="-1"
     >
