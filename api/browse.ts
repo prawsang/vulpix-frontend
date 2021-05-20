@@ -31,3 +31,10 @@ export const getResult = async (identifier: string) => {
   const res = await axios.get(`${baseUrl}/browse/application?identifier=${identifier}`)
   return res
 }
+
+export const addViewsToApp = async (identifier: string) => {
+  const res = await axios.post(`${baseUrl}/application/view`, {
+    identifier,
+  })
+  return res
+}
