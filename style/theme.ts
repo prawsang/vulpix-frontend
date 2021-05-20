@@ -32,6 +32,7 @@ const customTheme = {
     warning: {
       400: '#F7DF29',
       500: '#EDCB11',
+      700: '#FF9F05',
     },
   },
 }
