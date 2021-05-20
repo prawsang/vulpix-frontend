@@ -12,8 +12,8 @@ import Image from 'next/image'
 import { emailRegex, urlRegex } from 'utils/regex'
 
 const addhttp = (url) => {
-  if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
-    url = 'http://' + url
+  if (!/^(?:f|ht)tps?:\/\//.test(url)) {
+    url = `http://${url}`
   }
   return url
 }
