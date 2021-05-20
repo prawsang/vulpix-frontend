@@ -1,5 +1,6 @@
 import { Box, Flex, Heading, Icon, Text } from '@chakra-ui/react'
-import { getResult } from 'api/browse'
+import { useRouter } from 'next/router'
+import { addViewsToApp, getResult } from 'api/browse'
 import Card from 'components/common/Card'
 import Container from 'components/common/Container'
 import CTA from 'components/common/CTA'
@@ -38,6 +39,8 @@ const leakageCheck = (result) => {
 }
 
 const ApplicationResult = (props) => {
+  const router = useRouter()
+
   const data = props.data
   const { name, category, results } = data
 
@@ -63,6 +66,10 @@ const ApplicationResult = (props) => {
         setLeakage(leakageCheck(results[0]))
       }
     }
+
+    // View the app
+    const identifier = router.query.identifier as string
+    addViewsToApp(identifier)
   }, [data])
 
   const onVersionChange = (e) => {
