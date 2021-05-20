@@ -120,7 +120,9 @@ const Home = () => {
               <Text fontWeight="600" mb="32px">
                 Want to learn more about our testing methods?
               </Text>
-              <Button m="auto">About Testing</Button>
+              <Link href="/about">
+                <Button m="auto">About Testing</Button>
+              </Link>
             </Box>
           </Flex>
         </Box>
