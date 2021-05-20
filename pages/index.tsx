@@ -64,7 +64,9 @@ const Home = () => {
               <Text color="gray.700" mb="32px">
                 You can request the application to be tested. This takes only a few minutes.
               </Text>
-              <Button>Request Testing</Button>
+              <Link href="/request">
+                <Button>Request Testing</Button>
+              </Link>
             </Box>
           </Box>
           <Box flex="1" width="100%" pl={{ lg: 8, base: 0 }}>

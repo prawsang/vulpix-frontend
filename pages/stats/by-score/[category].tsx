@@ -24,6 +24,11 @@ interface DataType {
 
 const tableWithoutCategory = [
   {
+    name: '',
+    key: 'name',
+    render: (row, i) => <Text color="gray.600">{i + 1}</Text>,
+  },
+  {
     name: 'Application Name',
     key: 'name',
     render: (row) => (
