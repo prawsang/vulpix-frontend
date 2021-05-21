@@ -8,8 +8,8 @@ const ColorBackground = ({
   top,
 }: {
   image: string
-  width: string
-  side: 'left' | 'right'
+  width?: string
+  side?: 'left' | 'right'
   top?: string
 }) => {
   return (
