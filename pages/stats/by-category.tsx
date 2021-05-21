@@ -99,7 +99,7 @@ const ByCategory = () => {
           )}
           <Text
             position="absolute"
-            left="20px"
+            left="-20px"
             top="40%"
             fontSize="12px"
             color="gray.500"
