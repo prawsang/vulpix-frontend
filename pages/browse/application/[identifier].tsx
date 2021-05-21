@@ -41,13 +41,13 @@ const leakageCheck = (result) => {
 const getTestingMethodText = (testingMethod) => {
   switch (testingMethod) {
     case TESTING_METHOD.COMPLETE:
-      return 'VULPIX 2.0 Dynamic and Static Testing'
+      return 'VULPIX II Dynamic and Static Testing'
     case TESTING_METHOD.STATIC_ONLY:
-      return 'VULPIX 2.0 Static Testing'
+      return 'VULPIX II Static Testing'
     case TESTING_METHOD.DYNAMIC_ONLY:
-      return 'VULPIX 2.0 Dynamic Testing'
+      return 'VULPIX II Dynamic Testing'
     case TESTING_METHOD.OLD:
-      return 'VULPIX 1.0 Dynamic and Static Testing'
+      return 'VULPIX I Dynamic and Static Testing'
   }
 }
 
@@ -70,7 +70,7 @@ const ApplicationResult = (props) => {
         op.push({
           index: i,
           name: `Version ${result.version}, Tested with VULPIX ${
-            result.testingMethod === TESTING_METHOD.OLD ? '1.0' : '2.0'
+            result.testingMethod === TESTING_METHOD.OLD ? 'I' : 'II'
           }`,
         })
       })
@@ -176,7 +176,7 @@ const ApplicationResult = (props) => {
                       pl="16px"
                       mb="0"
                     >
-                      {leakage.length > 0 ? 'Leakage Detected' : 'Leakage Not Detected'}
+                      {leakage.length > 0 ? 'Leakage Detected' : 'No Leakage Detected'}
                     </Heading>
                   </Flex>
                   <Box>
