@@ -89,7 +89,7 @@ const CategoryChart = () => {
             <Doughnut
               type="doughnut"
               data={chartConfig}
-              options={{ plugins: { legend: { display: false } } }}
+              // options={{ plugins: { legend: { display: false } } }}
             />
           )}
         </Box>

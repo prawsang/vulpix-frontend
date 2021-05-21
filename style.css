@@ -7,3 +7,11 @@ body {
 canvas {
   width: 100% !important;
 }
+
+.recharts-cartesian-axis {
+  font-size: 11px;
+}
+
+.recharts-cartesian-axis.recharts-yAxis {
+  font-size: 13px;
+}

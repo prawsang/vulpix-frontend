@@ -1,18 +1,18 @@
-import { Box, Heading, VStack, Text } from '@chakra-ui/react'
+import { Box, Heading, VStack } from '@chakra-ui/react'
 import { byCriterion } from 'api/stats'
 import Container from 'components/common/Container'
 import DefaultLayout from 'layouts/default'
 import { useEffect, useState } from 'react'
 import CTA from 'components/common/CTA'
-import { Bar } from 'react-chartjs-2'
 import { criterionMap } from 'types/common'
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Label, Cell } from 'recharts'
 
 interface DataType {
-  categorySlug: string
-  avg: number
+  criterion: string
+  count: number
 }
 
-const backgroundColor = [
+const COLORS = [
   'rgba(255, 99, 132, 0.5)',
   'rgba(255, 159, 64, 0.5)',
   'rgba(255, 205, 86, 0.5)',
@@ -20,69 +20,31 @@ const backgroundColor = [
   'rgba(54, 162, 235, 0.5)',
   'rgba(153, 102, 255, 0.5)',
   'rgba(201, 203, 207, 0.5)',
-  'rgba(255, 99, 132, 0.5)',
-  'rgba(255, 159, 64, 0.5)',
-  'rgba(255, 205, 86, 0.5)',
-  'rgba(75, 192, 192, 0.5)',
-  'rgba(54, 162, 235, 0.5)',
-  'rgba(153, 102, 255, 0.5)',
-  'rgba(201, 203, 207, 0.5)',
-  'rgba(255, 99, 132, 0.5)',
-  'rgba(255, 159, 64, 0.5)',
-  'rgba(255, 205, 86, 0.5)',
-  'rgba(75, 192, 192, 0.5)',
-  'rgba(54, 162, 235, 0.5)',
-  'rgba(153, 102, 255, 0.5)',
-  'rgba(201, 203, 207, 0.5)',
-  'rgba(255, 99, 132, 0.5)',
-  'rgba(255, 159, 64, 0.5)',
-  'rgba(255, 205, 86, 0.5)',
-  'rgba(75, 192, 192, 0.5)',
-  'rgba(54, 162, 235, 0.5)',
-  'rgba(153, 102, 255, 0.5)',
 ]
 
 const ByCriterion = () => {
   const [data, setData] = useState<DataType[]>([])
-  const [chartData, setChartData] = useState<number[]>([])
-  const [labels, setLabels] = useState<string[]>([])
 
   useEffect(() => {
     const fetchData = async () => {
       const res = await byCriterion()
       if (res && res.data) {
-        setData(res.data)
-
-        const tempSort = [] as any[]
-        const tempChartData = [] as number[]
-        const tempLabels = [] as string[]
-
+        const out = [] as any[]
         Object.keys(res.data).forEach((criterion) => {
-          tempSort.push([res.data[criterion], criterionMap[criterion]])
+          out.push({
+            criterion,
+            count: res.data[criterion],
+          })
         })
-        tempSort.sort((a, b) => b[0] - a[0])
-
-        tempSort.forEach((e) => {
-          tempChartData.push(e[0])
-          tempLabels.push(e[1])
+        const sortedData = out.sort((a, b) => b.count - a.count)
+        sortedData.forEach((e) => {
+          e.criterion = criterionMap[e.criterion]
         })
-
-        setChartData(tempChartData)
-        setLabels(tempLabels)
+        setData(sortedData)
       }
     }
     fetchData()
   }, [])
-
-  const chartConfig = {
-    labels,
-    datasets: [
-      {
-        data: chartData,
-        backgroundColor,
-      },
-    ],
-  }
 
   return (
     <DefaultLayout pageName="Most Leaked Information Criterion">
@@ -104,25 +66,27 @@ const ByCriterion = () => {
           </VStack>
         </Box>
         <Box width="100%" maxWidth="100%" position="relative">
-          {data && (
-            <Bar
-              type="bar"
-              data={chartConfig}
-              options={{
-                plugins: { legend: { display: false } },
-              }}
-            />
-          )}
-          <Text
-            position="absolute"
-            left="-20px"
-            top="40%"
-            fontSize="12px"
-            color="gray.500"
-            transform="translateX(-50%) rotateZ(-90deg)"
-          >
-            Number of Apps Detected Transmitting the Information
-          </Text>
+          <Box width="100%" maxWidth="100%" height="600px" position="relative">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart width={150} height={40} data={data}>
+                <Tooltip cursor={false} />
+                <Bar dataKey="count">
+                  {data.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Bar>
+                <YAxis>
+                  <Label
+                    angle={-90}
+                    value="Number of Apps Detected Transmitting the Information"
+                    position="insideLeft"
+                    style={{ textAnchor: 'middle' }}
+                  />
+                </YAxis>
+                <XAxis height={150} dataKey="criterion" angle={-90} interval={0} textAnchor="end" />
+              </BarChart>
+            </ResponsiveContainer>
+          </Box>
         </Box>
         <Box mb="64px" />
         <Box maxWidth="800px" marginX="auto">
