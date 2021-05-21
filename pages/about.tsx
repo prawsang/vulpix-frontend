@@ -6,13 +6,13 @@ import CTA from 'components/common/CTA'
 const About = () => {
   return (
     <DefaultLayout pageName="About">
-      <Container maxWidth="600px">
+      <Container maxWidth="600px" lineHeight="1.8">
         <Box pt="64px" pb="64px" textAlign="center" maxWidth="800px" mx="auto">
           <Heading size="md" color="accent.500" textTransform="uppercase" mb="32px">
             About
           </Heading>
           <Box textAlign="left">
-            <Heading color="gray.600" size="md" mb="16px" fontWeight="normal">
+            <Heading lineHeight="1.5" color="gray.600" size="md" mb="16px" fontWeight="normal">
               <b>VULPIX</b> is an automated testing tool for Android applications with a goal to
               detect personal information leakage from using the applications.
             </Heading>
