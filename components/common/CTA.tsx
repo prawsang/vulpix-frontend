@@ -6,7 +6,13 @@ import Link from './Link'
 const CTA = (props: BoxProps) => {
   return (
     <Flex direction={{ base: 'column', md: 'row' }} alignItems="center" {...props}>
-      <Box flex="1" pr={{ base: 0, md: 8 }} width={{ base: '60%', md: '100%' }} mx="auto">
+      <Box
+        flex="1"
+        pr={{ base: 0, md: 8 }}
+        width={{ base: '60%', md: '100%' }}
+        mx="auto"
+        pb={{ base: '32px', md: 0 }}
+      >
         <Image src="/images/cta-img.svg" width={0} height={0} layout="responsive" />
       </Box>
       <Box

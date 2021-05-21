@@ -108,14 +108,22 @@ const Home = () => {
             <Box flex="1" pr={{ md: 16, base: 0 }} width={{ base: '70%', md: '100%' }}>
               <Image src="/images/about.svg" alt="" width={100} height={100} layout="responsive" />
             </Box>
-            <Box flex="1" pl={{ md: 16, base: 0 }} my={6}>
+            <Box
+              flex="1"
+              pl={{ md: 16, base: 0 }}
+              my={6}
+              textAlign={{ base: 'center', md: 'left' }}
+            >
               <Heading size="lg" color="accent.500" mb="48px">
                 About VULPIX
               </Heading>
               <Text color="gray.700" textAlign="left" mb="48px">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                VULPIX is an automated testing tool for Android applications to detect personal
+                information leakage from using the applications. After testing, a score called
+                VULPIX score is calculated to determine how safe the application is when it comes to
+                keeping your personal information private. Currently, there are several testing
+                methods related to VULPIX, and here we are using VULPIX II dynamic and static
+                testing to ensure greater accuracy and convenience.
               </Text>
               <Text fontWeight="600" mb="32px">
                 Want to learn more about our testing methods?

@@ -17,7 +17,7 @@ const ScoreDisplay = ({ score }: Props) => {
           {getText(score)}
         </Text>
       </Box>
-      <Progress colorScheme={getColor(score)} value={score} />
+      <Progress minWidth="120px" colorScheme={getColor(score)} value={score} />
     </Box>
   )
 }

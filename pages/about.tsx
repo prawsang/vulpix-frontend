@@ -13,8 +13,8 @@ const About = () => {
           </Heading>
           <Box textAlign="left">
             <Heading color="gray.600" size="md" mb="16px" fontWeight="normal">
-              <b>VULPIX</b> is an automated personal information leakage detection and testing tool
-              for Android applications.
+              <b>VULPIX</b> is an automated testing tool for Android applications with a goal to
+              detect personal information leakage from using the applications.
             </Heading>
             <Text as="p" color="gray.600" size="sm" mb="48px">
               You can read more about VULPIX{' '}

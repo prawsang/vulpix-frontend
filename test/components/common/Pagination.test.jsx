@@ -38,7 +38,6 @@ describe('Pagination', () => {
 
   it('should render pages correctly and highlight the current page', () => {
     const wrapper = shallow(<Pagination currentPage={10} totalPages={10} />)
-    console.log(wrapper.debug())
     expect(wrapper.children()).toHaveLength(7)
     expect(wrapper.childAt(1).dive().dive().text()).toBe('6')
     expect(wrapper.childAt(2).dive().dive().text()).toBe('7')
