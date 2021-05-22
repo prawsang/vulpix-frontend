@@ -1,6 +1,6 @@
 import Link from 'components/common/Link'
 import ScoreDisplay from 'components/common/ScoreDisplay'
-import { categoryMap } from 'utils/categoryMap'
+import { categoryMap } from 'constants/categoryMap'
 import { Box, Text } from '@chakra-ui/react'
 
 export const tableWithCategory = [

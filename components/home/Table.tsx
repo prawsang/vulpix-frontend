@@ -2,7 +2,7 @@ import { Box, Text } from '@chakra-ui/react'
 import Table from 'components/common/Table'
 import Link from 'components/common/Link'
 import ScoreDisplay from 'components/common/ScoreDisplay'
-import { categoryMap } from 'utils/categoryMap'
+import { categoryMap } from 'constants/categoryMap'
 
 const tableWithCategory = [
   {

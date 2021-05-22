@@ -8,7 +8,7 @@ import DefaultLayout from 'layouts/default'
 import { useEffect, useState } from 'react'
 import ScoreDisplay from 'components/common/ScoreDisplay'
 import { useRouter } from 'next/router'
-import { categoryMap } from 'utils/categoryMap'
+import { categoryMap } from 'constants/categoryMap'
 import CTA from 'components/common/CTA'
 import { isNil } from 'lodash'
 

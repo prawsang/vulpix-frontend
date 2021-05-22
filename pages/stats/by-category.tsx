@@ -5,7 +5,7 @@ import DefaultLayout from 'layouts/default'
 import { useEffect, useState } from 'react'
 import CTA from 'components/common/CTA'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Label, Cell } from 'recharts'
-import { categoryMap } from 'utils/categoryMap'
+import { categoryMap } from 'constants/categoryMap'
 
 interface DataType {
   categorySlug: string

@@ -9,7 +9,7 @@ import { useRouter } from 'next/router'
 import SearchBar from 'components/common/SearchBar'
 import Pagination from 'components/common/Pagination'
 import { getSearchResults } from 'api/browse'
-import { tableWithCategory } from 'utils/tableColumns'
+import { tableWithCategory } from 'constants/tableColumns'
 
 const Browse = () => {
   const router = useRouter()

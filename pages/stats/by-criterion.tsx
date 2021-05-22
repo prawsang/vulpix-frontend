@@ -4,7 +4,7 @@ import Container from 'components/common/Container'
 import DefaultLayout from 'layouts/default'
 import { useEffect, useState } from 'react'
 import CTA from 'components/common/CTA'
-import { criterionMap } from 'types/common'
+import { criterionMap } from 'constants/criterionMap'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Label, Cell } from 'recharts'
 
 interface DataType {

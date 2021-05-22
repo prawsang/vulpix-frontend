@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Table from 'components/common/Table'
-import { criterionMap } from 'types/common'
+import { criterionMap } from 'constants/criterionMap'
 import { FaExclamationCircle, FaCheckCircle } from 'react-icons/fa'
 import { Box, Flex, Heading, Icon, Text } from '@chakra-ui/react'
 

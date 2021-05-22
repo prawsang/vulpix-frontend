@@ -9,11 +9,13 @@ import Select from 'components/common/Select'
 import DefaultLayout from 'layouts/default'
 import { useEffect, useState } from 'react'
 import { getColor, getText } from 'utils/score'
-import { Result, criterionMap, TESTING_METHOD } from 'types/common'
+import { Result } from 'types/common'
 import Progress from 'components/common/Progress'
 import Link from 'next/link'
 import { FaExclamationCircle, FaCheckCircle } from 'react-icons/fa'
 import CriterionTable from 'components/results/CriterionTable'
+import { criterionMap } from 'constants/criterionMap'
+import { TESTING_METHOD } from 'constants/testingMethod'
 
 export async function getServerSideProps(context) {
   const identifier = context.params.identifier as string

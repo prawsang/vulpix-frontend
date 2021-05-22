@@ -6,11 +6,11 @@ import CategorySelect from 'components/browse/CategorySelect'
 import CTA from 'components/common/CTA'
 import Table from 'components/common/Table'
 import { useRouter } from 'next/router'
-import { categoryMap } from 'utils/categoryMap'
+import { categoryMap } from 'constants/categoryMap'
 import SearchBar from 'components/common/SearchBar'
 import Pagination from 'components/common/Pagination'
 import { getAppsInCategory } from 'api/browse'
-import { tableWithoutCategory } from 'utils/tableColumns'
+import { tableWithoutCategory } from 'constants/tableColumns'
 
 const Browse = () => {
   const router = useRouter()
