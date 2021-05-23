@@ -103,6 +103,7 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': ['error', { args: 'none' }],
         '@typescript-eslint/require-await': 'off',
         '@typescript-eslint/explicit-module-boundary-types': 'off',
+        '@typescript-eslint/ban-ts-comment': 'off',
 
         // react
         'react/prop-types': [0], // fixed by flow

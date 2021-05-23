@@ -1,4 +1,4 @@
-import { Box, Heading, VStack } from '@chakra-ui/react'
+import { Box, Heading, VStack, Text } from '@chakra-ui/react'
 import { byCriterion } from 'api/stats'
 import Container from 'components/common/Container'
 import DefaultLayout from 'layouts/default'
@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import CTA from 'components/common/CTA'
 import { criterionMap } from 'constants/criterionMap'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Label, Cell } from 'recharts'
+import Card from 'components/common/Card'
 
 interface DataType {
   criterion: string
@@ -21,6 +22,24 @@ const COLORS = [
   'rgba(153, 102, 255, 0.5)',
   'rgba(201, 203, 207, 0.5)',
 ]
+
+const renderTooltip = ({ payload }) =>
+  payload ? (
+    <Card bg="white">
+      {payload.length > 0 && (
+        <>
+          <Heading size="sm" color="gray.700">
+            {payload[0].payload.criterion}
+          </Heading>
+          <Text size="xs" color="gray.600">
+            Count: {payload[0].payload.count} Times
+          </Text>
+        </>
+      )}
+    </Card>
+  ) : (
+    <div />
+  )
 
 const ByCriterion = () => {
   const [data, setData] = useState<DataType[]>([])
@@ -69,7 +88,8 @@ const ByCriterion = () => {
           <Box width="100%" maxWidth="100%" height="600px" position="relative">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart width={150} height={40} data={data}>
-                <Tooltip cursor={false} />
+                {/* @ts-ignore */}
+                <Tooltip cursor={false} content={renderTooltip} />
                 <Bar dataKey="count">
                   {data.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
@@ -78,12 +98,12 @@ const ByCriterion = () => {
                 <YAxis>
                   <Label
                     angle={-90}
-                    value="Number of Apps Detected Transmitting the Information"
+                    value="Number of Times Leakage was Detected During Testing"
                     position="insideLeft"
                     style={{ textAnchor: 'middle' }}
                   />
                 </YAxis>
-                <XAxis height={150} dataKey="criterion" angle={-90} interval={0} textAnchor="end" />
+                <XAxis height={200} dataKey="criterion" angle={-90} interval={0} textAnchor="end" />
               </BarChart>
             </ResponsiveContainer>
           </Box>

@@ -1,4 +1,4 @@
-import { Box, Heading, VStack } from '@chakra-ui/react'
+import { Box, Heading, VStack, Text } from '@chakra-ui/react'
 import { byCategory } from 'api/stats'
 import Container from 'components/common/Container'
 import DefaultLayout from 'layouts/default'
@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import CTA from 'components/common/CTA'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Label, Cell } from 'recharts'
 import { categoryMap } from 'constants/categoryMap'
+import Card from 'components/common/Card'
 
 interface DataType {
   categorySlug: string
@@ -21,6 +22,27 @@ const COLORS = [
   'rgba(153, 102, 255, 0.5)',
   'rgba(201, 203, 207, 0.5)',
 ]
+
+const renderTooltip = ({ payload }) =>
+  payload ? (
+    <Card bg="white">
+      {payload.length > 0 && (
+        <>
+          <Heading size="sm" color="gray.700">
+            {payload[0].payload.categorySlug}
+          </Heading>
+          <Text size="xs" color="gray.600">
+            Average Score: {payload[0].payload.avg}
+          </Text>
+          <Text size="xs" color="gray.600">
+            Number of Applications: {payload[0].payload.count}
+          </Text>
+        </>
+      )}
+    </Card>
+  ) : (
+    <div>Hello</div>
+  )
 
 const ByCategory = () => {
   const [data, setData] = useState<DataType[]>([])
@@ -57,12 +79,18 @@ const ByCategory = () => {
             <Heading size="lg" color="accent.500" textAlign="center" marginTop="16px !important">
               Categories With The Most Leakage
             </Heading>
+            <Text fontSize="12px" color="gray.600" maxWidth="800px" mt="16px !important">
+              Disclaimer: The categories in this chart are from the categories that application
+              developers chose in Play Store. Category names may not reflect the purpose of the
+              applications.
+            </Text>
           </VStack>
         </Box>
         <Box width="100%" maxWidth="100%" height="600px" position="relative">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart width={150} height={40} data={data}>
-              <Tooltip cursor={false} />
+              {/* @ts-ignore */}
+              <Tooltip cursor={false} content={renderTooltip} />
               <Bar dataKey="avg">
                 {data.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />

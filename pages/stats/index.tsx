@@ -81,12 +81,6 @@ const Statistics = () => {
           width="100%"
         />
         <StatListItem
-          name="Categories of Applications with High Risk"
-          link="/stats/category-chart"
-          mb="16px"
-          width="100%"
-        />
-        <StatListItem
           name="100 Most Viewed on VULPIX"
           link="/stats/by-views"
           mb="16px"
