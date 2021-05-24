@@ -96,7 +96,7 @@ const ByCategory = () => {
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                 ))}
               </Bar>
-              <YAxis>
+              <YAxis domain={[0, 100]}>
                 <Label
                   angle={-90}
                   value="Average Vulpix Score"

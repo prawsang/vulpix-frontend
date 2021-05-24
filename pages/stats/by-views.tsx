@@ -77,7 +77,7 @@ const ByViews = () => {
   }, [])
 
   return (
-    <DefaultLayout pageName="100 Most Viewed on VULPIX">
+    <DefaultLayout pageName="100 Most Viewed on VULPIX II">
       <Container mb="64px">
         <Box pt="64px" pb="64px" textAlign="center" maxWidth="800px" mx="auto">
           <VStack spacing="32px">
@@ -91,7 +91,7 @@ const ByViews = () => {
               Statistics
             </Heading>
             <Heading size="lg" color="accent.500" textAlign="center" marginTop="16px !important">
-              100 Most Viewed on VULPIX
+              100 Most Viewed on VULPIX II
             </Heading>
           </VStack>
         </Box>

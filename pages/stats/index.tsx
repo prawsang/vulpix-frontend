@@ -81,7 +81,7 @@ const Statistics = () => {
           width="100%"
         />
         <StatListItem
-          name="100 Most Viewed on VULPIX"
+          name="100 Most Viewed on VULPIX II"
           link="/stats/by-views"
           mb="16px"
           width="100%"
