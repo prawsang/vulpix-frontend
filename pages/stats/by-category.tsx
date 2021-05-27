@@ -51,11 +51,12 @@ const ByCategory = () => {
     const fetchData = async () => {
       const res = await byCategory()
       if (res && res.data) {
-        const sortedData = res.data.sort((a, b) => b.avg - a.avg)
+        let sortedData = res.data.sort((a, b) => b.avg - a.avg)
         sortedData.forEach((e) => {
           e.categorySlug = categoryMap[e.categorySlug]
           e.avg = (Math.round(e.avg * 100) / 100).toFixed(4)
         })
+        sortedData = sortedData.filter((e) => e.categorySlug !== categoryMap.null)
         setData(sortedData)
       }
     }

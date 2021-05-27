@@ -32,4 +32,7 @@ export const categoryMap = {
   'travel-and-local': 'Travel & Local',
   'video-players': 'Video Players & Editors',
   weather: 'Weather',
+  unknown: 'Unknown',
+  '': 'Unknown',
+  null: 'NULL',
 }

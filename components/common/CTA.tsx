@@ -26,7 +26,7 @@ const CTA = (props: BoxProps) => {
           Can&apos;t find your application?
         </Text>
         <Text color="gray.700" mb="32px">
-          You can request the application to be tested. This takes only a few minutes.
+          You can request the application to be tested.
         </Text>
         <Link href="/request">
           <Button mx="auto">Request Testing</Button>

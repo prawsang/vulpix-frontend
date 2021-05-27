@@ -75,7 +75,7 @@ const Statistics = () => {
           width="100%"
         />
         <StatListItem
-          name="Categories With The Most Leakage"
+          name="Categories With The Most Leakage (Ranked by Average VULPIX Score)"
           link="/stats/by-category"
           mb="16px"
           width="100%"

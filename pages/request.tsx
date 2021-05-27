@@ -87,8 +87,8 @@ const Request = () => {
                 fontWeight="normal"
                 mb="32px"
               >
-                You can request the application to be tested on our servers. This takes only a few
-                minutes.
+                You can request the application to be tested on our servers. This can take a while
+                depending on how many applications are in the queue.
               </Heading>
               {step === 0 && (
                 <>
