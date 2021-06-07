@@ -34,5 +34,5 @@ export const categoryMap = {
   weather: 'Weather',
   unknown: 'Unknown',
   '': 'Unknown',
-  null: 'NULL',
+  null: 'Unknown',
 }
