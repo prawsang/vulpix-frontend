@@ -36,8 +36,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Deploy on an Ubuntu instance  
 Before starting, make sure to have port 3000 exposed. To see the current configuration, run `sudo ufw status`. If not enabled, run `sudo ufw allow 3000`.  
 1. `sudo apt update`
-2. `sudo apt install nodejs`
-3. Check the installation by running `nodejs -v` and `npm -v`
+2. To install nodejs, head over to [NodeJS README](https://github.com/nodesource/distributions/blob/master/README.md). Look for the installation commands for versions 14 or higher.
+3. Check the installation by running `node -v` and `npm -v`
 4. Run `sudo npm install -g pm2`
 5. Run `sudo npm install -g yarn`
 6. Check the installation of yarn by running `yarn --version`
