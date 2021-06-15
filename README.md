@@ -41,7 +41,7 @@ Before starting, make sure to have port 3000 exposed. To see the current configu
 4. Run `sudo npm install -g pm2`
 5. Run `sudo npm install -g yarn`
 6. Check the installation of yarn by running `yarn --version`
-7. `touch .env.local` and paste in the contents as below. Same for `.env.production.local`
+7. `cd` to the directory of the cloned repository and `touch .env.local` and paste in the contents as below. Same for `.env.production.local`
 ```
 ## .env.local and .env.production.local
 NEXT_PUBLIC_BACKEND_URL=YOUR_BACKEND_URL
