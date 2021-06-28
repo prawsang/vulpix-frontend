@@ -9,13 +9,14 @@ import StatListItem from 'components/stats/StatsListItem'
 const Statistics = () => {
   return (
     <DefaultLayout pageName="Statistics" logoColor="gray.700">
-      <ColorBackground
-        image="/images/stats-bg.svg"
-        side="left"
-        width="60%"
-        top="translateY(-20%)"
-      />
-      <Container mb="32px">
+      <Container mb="32px" position="relative">
+        <ColorBackground
+          image="/images/green-circle.svg"
+          side="left"
+          width="80%"
+          top="-20%"
+          left="-20%"
+        />
         <Flex
           pt="64px"
           flexDirection={{

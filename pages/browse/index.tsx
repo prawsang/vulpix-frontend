@@ -10,8 +10,14 @@ import Image from 'next/image'
 const Browse = () => {
   return (
     <DefaultLayout pageName="Browse" logoColor="gray.700">
-      <ColorBackground image="/images/browse-bg.svg" side="left" width="60%" />
-      <Container mb="64px">
+      <Container mb="64px" position="relative">
+        <ColorBackground
+          image="/images/browse-bg.svg"
+          side="left"
+          mdWidth="60%"
+          top="-60px"
+          width="60%"
+        />
         <Flex
           pt="64px"
           flexDirection={{

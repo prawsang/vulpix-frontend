@@ -1,5 +1,4 @@
 import { Text, Heading, Flex, Box, VStack } from '@chakra-ui/react'
-import Image from 'next/image'
 import DefaultLayout from 'layouts/default'
 import Container from 'components/common/Container'
 import Divider from 'components/common/Divider'
@@ -29,8 +28,14 @@ const Home = () => {
       menuColor="white"
       logoColor={{ base: 'white', lg: 'primary.500' }}
     >
-      <ColorBackground image="/images/home-bg.svg" width="60%" side="right" />
-      <Container mb="64px">
+      <Container mb="64px" position="relative">
+        <ColorBackground
+          image="/images/home-bg.svg"
+          width="75%"
+          side="right"
+          top="-60px"
+          right="-10%"
+        />
         <Flex
           pt="64px"
           flexDirection={{
@@ -70,13 +75,7 @@ const Home = () => {
             </Box>
           </Box>
           <Box flex="1" width="100%" pl={{ lg: 8, base: 0 }}>
-            <Image
-              src="/images/home-img.svg"
-              alt=""
-              layout="responsive"
-              width={1000}
-              height={1000}
-            />
+            <img src="/images/home-img.svg" alt="" />
           </Box>
         </Flex>
       </Container>
@@ -106,7 +105,7 @@ const Home = () => {
             alignItems="center"
           >
             <Box flex="1" pr={{ md: 16, base: 0 }} width={{ base: '70%', md: '100%' }}>
-              <Image src="/images/about.svg" alt="" width={100} height={100} layout="responsive" />
+              <img src="/images/about.svg" alt="" />
             </Box>
             <Box
               flex="1"

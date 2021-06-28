@@ -67,8 +67,14 @@ const Request = () => {
 
   return (
     <DefaultLayout pageName="Request Testing" logoColor={{ base: 'gray.700', lg: 'primary.500' }}>
-      <ColorBackground image="/images/request-bg.svg" side="right" width="60%" />
-      <Container mb="64px">
+      <Container mb="64px" position="relative">
+        <ColorBackground
+          image="/images/green-circle.svg"
+          side="right"
+          right="0"
+          width="60%"
+          mdWidth="60%"
+        />
         <Flex
           pt="64px"
           flexDirection={{

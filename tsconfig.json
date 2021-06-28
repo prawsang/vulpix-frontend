@@ -25,7 +25,8 @@
       "redux/*": ["./redux/*"],
       "style/*": ["./style/*"],
       "types/*": ["./types/*"],
-      "utils/*": ["./utils/*"]
+      "utils/*": ["./utils/*"],
+      "assets/*": ["./assets/*"]
     }
   },
   "exclude": ["node_modules"],

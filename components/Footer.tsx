@@ -4,11 +4,11 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <Box borderTopStyle="solid" borderTopColor="gray.300" borderTopWidth="2px">
+    <Box borderTopStyle="solid" borderTopColor="gray.300" borderTopWidth="2px" bg="white">
       <WideContainer>
         <Flex py="16px" alignItems="center">
           <Link href="/">
-            <Heading size="md" color="primary.500" textTransform="uppercase">
+            <Heading size="md" color="primary.500" mr="8px" textTransform="uppercase">
               VULPIX
             </Heading>
           </Link>

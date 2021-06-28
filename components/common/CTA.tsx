@@ -1,5 +1,4 @@
 import { Box, Text, BoxProps, Flex } from '@chakra-ui/react'
-import Image from 'next/image'
 import Button from './Button'
 import Link from './Link'
 
@@ -13,7 +12,7 @@ const CTA = (props: BoxProps) => {
         mx="auto"
         pb={{ base: '32px', md: 0 }}
       >
-        <Image src="/images/cta-img.svg" width={0} height={0} layout="responsive" />
+        <img src="/images/cta-img.svg" alt="" />
       </Box>
       <Box
         pl={{ base: 0, md: 8 }}
