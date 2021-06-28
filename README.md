@@ -48,10 +48,11 @@ NEXT_PUBLIC_BACKEND_URL=YOUR_BACKEND_URL
 NEXT_PUBLIC_TESTING_BACKEND_URL=http://vulpix-real-backend.theminerdev.com
 ```
 8. Install dependencies by running `yarn install --frozen-lockfile`
-9. Build the application `yarn build`. This can take a while.
-10. Start the application in production by running `pm2 start yarn --name "nextjs" -- start`
-11. A server will start on port 3000. You can change this in package.json in the start script and run steps 10 and 11 again.
-12. (optional) In addtion, configure NGINX to setup a reverse-proxy server to pass requests from port 80 to port 3000. The NGINX configuration for the application is as below:
+9. Open `package.json` in the root directory of the project, and replace `$PORT` in the start script with `3000`.
+10. Build the application `yarn build`. This can take a while.
+11. Start the application in production by running `pm2 start yarn --name "nextjs" -- start`
+12. A server will start on port 3000. You can change this in package.json in the start script and run steps 10 and 11 again.
+13. (optional) In addtion, configure NGINX to setup a reverse-proxy server to pass requests from port 80 to port 3000. The NGINX configuration for the application is as below:
 ```
 server {
     listen 80 default_server;
